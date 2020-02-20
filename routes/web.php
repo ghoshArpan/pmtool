@@ -12,10 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -23,7 +23,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('index', function () {
     return view('index');
 })->name('index');
+Auth::routes();
 
+Route::group(['middleware' => 'permissionCheck'],function(){
 
 Route::get('users', function () {
     return view('users');
@@ -76,3 +78,5 @@ Route::get('clients', function () {
 Route::get('todo_list', function () {
     return view('todo_list');
 })->name('todo_list');
+
+});

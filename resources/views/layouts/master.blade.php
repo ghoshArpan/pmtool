@@ -355,7 +355,7 @@
                         <li class="g_heading">Hr</li>
                         <li class="active"><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/index"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
                         <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/users"><i class="icon-users"></i><span>Users</span></a></li>
-                        <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/departments"><i class="icon-control-pause"></i><span>Departments</span></a></li>
+                        <li class=""><a href="{{route('department')}}"><i class="icon-control-pause"></i><span>Departments</span></a></li>
                         <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/employee"><i class="icon-user"></i><span>Employee</span></a></li>
                         <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/activities"><i class="icon-equalizer"></i><span>Activities</span></a></li>
                         <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/holidays"><i class="icon-like"></i><span>Holidays</span></a></li>
