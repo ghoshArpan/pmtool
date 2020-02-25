@@ -33,7 +33,7 @@ Route::get('users', function () {
 
 Route::get('departments', function () {
     return view('departments');
-})->name('department');
+})->name('departments');
 
 
 Route::get('employee', function () {
@@ -79,4 +79,9 @@ Route::get('todo_list', function () {
     return view('todo_list');
 })->name('todo_list');
 
-});
+
+//User Controller
+Route::post('employeeSaveUpdate', 'UserController@employeeSaveUpdate')->name('employeeSaveUpdate');
+Route::post('employeeDatatable', 'UserController@employeeDatatable');
+Route::post('employeeEditData', 'UserController@employeeEditData');
+Route::post('employeeDelete', 'UserController@employeeDelete');

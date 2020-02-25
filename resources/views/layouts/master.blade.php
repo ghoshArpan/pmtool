@@ -9,14 +9,18 @@
         <meta name="description" content="Laravel">
         <meta name="author" content="Laravel">
 
-        <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">    
-      <link rel="stylesheet" href="{{asset('assets/css/summernote.css')}}"> 
+        <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+      <link rel="stylesheet" href="{{asset('assets/css/summernote.css')}}">
+      <link rel="stylesheet" href="{{asset('css/dropify.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/datatables.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/jquery-confirm.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/c3.min.css')}}">
 
 
         <!-- Custom Css -->
         <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/theme1.css')}}">
+        <link rel="stylesheet" href="{{asset('css/bootstrapValidator.min.css')}}">
     </head>
 
     <body class="font-montserrat">
@@ -32,7 +36,7 @@
             <div id="header_top" class="header_top">
                 <div class="container">
                     <div class="hleft">
-                        <a class="header-brand" href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/index"><i class="fe fe-command brand-logo"></i></a>
+                        <a class="header-brand" href="{{route('index')}}"><i class="fe fe-command brand-logo"></i></a>
                         <div class="dropdown">
                             <a href="http://puffintheme.com/demo/epic/hr/laravel/public/pages/search" class="nav-link icon"><i class="fa fa-search"></i></a>
                             <a href="http://puffintheme.com/demo/epic/hr/laravel/public/pages/calendar" class="nav-link icon app_inbox"><i class="fa fa-calendar"></i></a>
@@ -50,7 +54,7 @@
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
             <div id="rightsidebar" class="right_sidebar">
                 <a href="javascript:void(0)" class="p-3 settingbar float-right"><i class="fa fa-close"></i></a>
                 <ul class="nav nav-tabs" role="tablist">
@@ -216,11 +220,11 @@
                                 <div class="desc">
                                     <h3>Developer Team</h3>
                                     <h4>Hangouts</h4>
-                                    <ul class="list-unstyled team-info margin-0 p-t-5">                                            
+                                    <ul class="list-unstyled team-info margin-0 p-t-5">
                                         <li><img src="{{asset('assets//images/xs/avatar1.jpg')}}" alt="Avatar"></li>
                                         <li><img src="{{asset('assets//images/xs/avatar2.jpg')}}" alt="Avatar"></li>
                                         <li><img src="{{asset('assets//images/xs/avatar3.jpg')}}" alt="Avatar"></li>
-                                        <li><img src="{{asset('assets//images/xs/avatar4.jpg')}}" alt="Avatar"></li>                                            
+                                        <li><img src="{{asset('assets//images/xs/avatar4.jpg')}}" alt="Avatar"></li>
                                     </ul>
                                 </div>
                             </li>
@@ -250,7 +254,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>    
+            </div>
             <div class="user_div">
                 <h5 class="brand-name mb-4">Epic HR<a href="javascript:void(0)" class="user_btn"><i class="icon-logout"></i></a></h5>
                 <div class="card">
@@ -274,7 +278,7 @@
                     <div class="card-header">
                         <h3 class="card-title">Statistics</h3>
                         <div class="card-options">
-                            <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>                                
+                            <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
                             <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
                         </div>
                     </div>
@@ -290,7 +294,7 @@
                                     <h4 class="font-30 font-weight-bold">27%</h4>
                                 </div>
                             </div>
-                        </div>                
+                        </div>
                         <div class="form-group">
                             <label class="d-block">Total Income<span class="float-right">77%</span></label>
                             <div class="progress progress-xs">
@@ -347,46 +351,46 @@
                         </li>
                     </ul>
                 </div>
-            </div>    
+            </div>
             <div id="left-sidebar" class="sidebar ">
                 <h5 class="brand-name">Epic HR <a href="javascript:void(0)" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
                 <nav id="left-sidebar-nav" class="sidebar-nav">
                     <ul class="metismenu">
                         <li class="g_heading">Hr</li>
-                        <li class="active"><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/index"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
-                        <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/users"><i class="icon-users"></i><span>Users</span></a></li>
-                        <li class=""><a href="{{route('department')}}"><i class="icon-control-pause"></i><span>Departments</span></a></li>
-                        <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/employee"><i class="icon-user"></i><span>Employee</span></a></li>
-                        <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/activities"><i class="icon-equalizer"></i><span>Activities</span></a></li>
-                        <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/holidays"><i class="icon-like"></i><span>Holidays</span></a></li>
-                        <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/events"><i class="icon-calendar"></i><span>Events</span></a></li>
-                        <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/payroll"><i class="icon-briefcase"></i><span>Payroll</span></a></li>
-                        <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/accounts"><i class="icon-credit-card"></i><span>Accounts</span></a></li>
-                        <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/hrms/report"><i class="icon-bar-chart"></i><span>Report</span></a></li>
+                        <li class="active"><a href="{{route('index')}}"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
+                        <li class=""><a href="{{route('users')}}"><i class="icon-users"></i><span>Users</span></a></li>
+                        <li class=""><a href="{{route('departments')}}"><i class="icon-control-pause"></i><span>Departments</span></a></li>
+                        <li class=""><a href="{{route('employee')}}"><i class="icon-user"></i><span>Employee</span></a></li>
+                        <li class=""><a href="{{route('activities')}}"><i class="icon-equalizer"></i><span>Activities</span></a></li>
+                        <li class=""><a href="{{route('holidays')}}"><i class="icon-like"></i><span>Holidays</span></a></li>
+                        {{-- <li class=""><a href="{{route('events')}}"><i class="icon-calendar"></i><span>Events</span></a></li> --}}
+                        {{-- <li class=""><a href="{{route('payroll')}}"><i class="icon-briefcase"></i><span>Payroll</span></a></li> --}}
+                        {{-- <li class=""><a href="{{route('accounts')}}"><i class="icon-credit-card"></i><span>Accounts</span></a></li> --}}
+                        {{-- <li class=""><a href="{{route('report')}}"><i class="icon-bar-chart"></i><span>Report</span></a></li> --}}
                         <li class="g_heading">Project</li>
                         <li class="">
                             <a href="javascript:void(0)" class="has-arrow arrow-c"><i class="icon-cup"></i><span>Project</span></a>
                             <ul>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/project/index2">Dashboard</a></li>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/project/list">Project list</a></li>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/project/taskboard">Taskboard</a></li>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/project/ticket">Ticket List</a></li>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/project/ticketdetails">Ticket Details</a></li>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/project/clients">Clients</a></li>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/project/todo">Todo List</a></li>
+                                <li class=""><a href="index2">Dashboard</a></li>
+                                <li class=""><a href="list">Project list</a></li>
+                                <li class=""><a href="taskboard">Taskboard</a></li>
+                                <li class=""><a href="ticket">Ticket List</a></li>
+                                <li class=""><a href="ticketdetails">Ticket Details</a></li>
+                                <li class=""><a href="clients">Clients</a></li>
+                                <li class=""><a href="todo">Todo List</a></li>
                             </ul>
                         </li>
-                        <li class="">
+                        {{-- <li class="">
                             <a href="javascript:void(0)" class="has-arrow arrow-c"><i class="icon-briefcase"></i><span>Job Portal</span></a>
                             <ul>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/job/index3">Dashboard</a></li>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/job/positions">Positions</a></li>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/job/applicants">Applicants</a></li>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/job/resumes">Resumes</a></li>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/job/jobsettings">Settings</a></li>
+                                <li class=""><a href="index3">Dashboard</a></li>
+                                <li class=""><a href="positions">Positions</a></li>
+                                <li class=""><a href="applicants">Applicants</a></li>
+                                <li class=""><a href="resumes">Resumes</a></li>
+                                <li class=""><a href="jobsettings">Settings</a></li>
                             </ul>
-                        </li>
-                        <li class="">
+                        </li> --}}
+                        {{-- <li class="">
                             <a href="javascript:void(0)" class="has-arrow arrow-c"><i class="icon-lock"></i><span>Authentication</span></a>
                             <ul>
                                 <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/authentication/login">Login</a></li>
@@ -395,19 +399,24 @@
                                 <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/authentication/error404">Error 404</a></li>
                                 <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/authentication/error500">Error 500</a></li>
                             </ul>
-                        </li>
+                        </li> --}}
                     </ul>
-                </nav>        
+                </nav>
             </div>
         </div>
         <div class="page">
             @yield('content')
-        </div>   
+        </div>
         <!-- Scripts -->
+        <script src="{{asset('assets/js/lib.vendor.bundle.js')}}"></script>
+        <script src="{{asset('js/datatables.min.js')}}"></script>
+        <script src="{{asset('js/jquery-confirm.min.js')}}"></script>
         <script src="{{asset('assets/js/lib.vendor.bundle.js')}}"></script>
 
 
         <script src="{{asset('assets/js/counterup.bundle.js')}}"></script>
+        <script src="{{asset('js/dropify.js')}}"></script>
+        <script src="{{asset('js/dropify.min.js')}}"></script>
         <script src="{{asset('assets/js/apexcharts.bundle.js')}}"></script>
         <script src="{{asset('assets/js/knobjs.bundle.js')}}"></script>
         <script src="{{asset('assets/js/c3.bundle.js')}}"></script>
@@ -415,7 +424,10 @@
         <script src="{{asset('assets/js/core.js')}}"></script>
         <script src="{{asset('assets/js/project-index.js')}}"></script>
         <script src="{{asset('assets/js/summernote.js')}}"></script>
+        <script src="{{asset('js/bootstrapValidator.min.js')}}"></script>
         <script src="{{asset('assets/js/summernote.bundle.js')}}"></script>
+
+        @yield('script')
 
     </body>
 </html>

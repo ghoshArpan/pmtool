@@ -8,10 +8,7 @@
         <div class="page-header">
             <div class="left">
                 <h1 class="page-title">Employee</h1>
-                <div class="input-icon xs-hide">
-                    <input type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-icon-addon"><i class="fe fe-search"></i></span>
-                </div>      
+
             </div>
             <div class="right">
                 <ul class="nav nav-pills">
@@ -36,7 +33,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Project</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Graphics Design</a>                                    
+                            <a class="dropdown-item" href="#">Graphics Design</a>
                             <a class="dropdown-item" href="#">Angular Admin</a>
                             <a class="dropdown-item" href="#">PSD to HTML</a>
                             <a class="dropdown-item" href="#">iOs App Development</a>
@@ -61,7 +58,7 @@
                                                 <span class="badge badge-outline status"></span>
                                             </div>
                                         </div>
-                                    </a>                            
+                                    </a>
                                 </li>
                                 <li class="online">
                                     <a href="javascript:void(0);">
@@ -73,7 +70,7 @@
                                                 <span class="badge badge-outline status"></span>
                                             </div>
                                         </div>
-                                    </a>                            
+                                    </a>
                                 </li>
                                 <li class="offline">
                                     <a href="javascript:void(0);">
@@ -85,7 +82,7 @@
                                                 <span class="badge badge-outline status"></span>
                                             </div>
                                         </div>
-                                    </a>                            
+                                    </a>
                                 </li>
                                 <li class="online">
                                     <a href="javascript:void(0);">
@@ -97,8 +94,8 @@
                                                 <span class="badge badge-outline status"></span>
                                             </div>
                                         </div>
-                                    </a>                            
-                                </li>                        
+                                    </a>
+                                </li>
                             </ul>
                             <div class="dropdown-divider"></div>
                             <a href="javascript:void(0)" class="dropdown-item text-center text-muted-dark readall">Mark all as read</a>
@@ -142,7 +139,7 @@
                                         <h4 class="title">7 New Orders <small class="float-right text-muted">11:35</small></h4>
                                         <small>You received a new oder from Tina.</small>
                                     </div>
-                                </li>                                   
+                                </li>
                             </ul>
                             <div class="dropdown-divider"></div>
                             <a href="javascript:void(0)" class="dropdown-item text-center text-muted-dark readall">Mark all as read</a>
@@ -236,7 +233,7 @@
 <div class="section-body">
     <div class="container-fluid">
         <div class="tab-content">
-            <div class="tab-pane fade show active" id="Employee-list" role="tabpanel">                        
+            <div class="tab-pane fade show active" id="Employee-list" role="tabpanel">
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Employee List</h3>
@@ -293,7 +290,7 @@
                                             <label class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
                                                 <span class="custom-control-label">&nbsp;</span>
-                                            </label>                                                    
+                                            </label>
                                         </td>
                                         <td class="d-flex">
                                             <img class="avatar" src="../assets/images/xs/avatar2.jpg" data-toggle="tooltip" title="" data-original-title="Avatar Name"/>
@@ -341,7 +338,7 @@
                                             <label class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
                                                 <span class="custom-control-label">&nbsp;</span>
-                                            </label>                                                    
+                                            </label>
                                         </td>
                                         <td class="d-flex">
                                             <img class="avatar" src="../assets/images/xs/avatar3.jpg" data-toggle="tooltip" title="" data-original-title="Avatar Name"/>
@@ -383,7 +380,7 @@
                                             <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
                                             <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
                                         </td>
-                                    </tr>                                            
+                                    </tr>
                                     <tr>
                                         <td class="w40">
                                             <label class="custom-control custom-checkbox">
@@ -413,7 +410,7 @@
                                             <label class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
                                                 <span class="custom-control-label">&nbsp;</span>
-                                            </label>                                                    
+                                            </label>
                                         </td>
                                         <td class="d-flex">
                                             <img class="avatar" src="../assets/images/xs/avatar2.jpg" data-toggle="tooltip" title="" data-original-title="Avatar Name"/>
@@ -431,7 +428,7 @@
                                             <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
                                             <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
                                         </td>
-                                    </tr>                                            
+                                    </tr>
                                     <tr>
                                         <td class="w40">
                                             <label class="custom-control custom-checkbox">
@@ -461,7 +458,7 @@
                                             <label class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
                                                 <span class="custom-control-label">&nbsp;</span>
-                                            </label>                                                    
+                                            </label>
                                         </td>
                                         <td class="d-flex">
                                             <img class="avatar" src="../assets/images/xs/avatar2.jpg" data-toggle="tooltip" title="" data-original-title="Avatar Name"/>
@@ -485,7 +482,7 @@
                                             <label class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
                                                 <span class="custom-control-label">&nbsp;</span>
-                                            </label>                                                    
+                                            </label>
                                         </td>
                                         <td class="d-flex">
                                             <img class="avatar" src="../assets/images/xs/avatar2.jpg" data-toggle="tooltip" title="" data-original-title="Avatar Name"/>
@@ -529,7 +526,7 @@
                                     </div>
                                 </div>
                                 <p class="mb-4">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                                <button class="btn btn-outline-primary btn-sm"><span class="fa fa-twitter"></span> Follow</button>                            
+                                <button class="btn btn-outline-primary btn-sm"><span class="fa fa-twitter"></span> Follow</button>
                             </div>
                         </div>
                         <div class="card">
@@ -552,7 +549,7 @@
                                             <h4 class="font-30 font-weight-bold">87%</h4>
                                         </div>
                                     </div>
-                                </div>                
+                                </div>
                                 <div class="form-group">
                                     <label class="d-block">Laravel<span class="float-right">77%</span></label>
                                     <div class="progress progress-xs">
@@ -636,7 +633,7 @@
                             </div>
                         </div>
                     </div>
-                </div>                        
+                </div>
             </div>
             <div class="tab-pane fade" id="Employee-Request" role="tabpanel">
                 <div class="card">
@@ -660,7 +657,7 @@
                                             <span class="avatar avatar-orange" data-toggle="tooltip" title="Avatar Name">DB</span>
                                         </td>
                                         <td>
-                                            <div class="font-15">Marshall Nichols</div>                                            
+                                            <div class="font-15">Marshall Nichols</div>
                                         </td>
                                         <td><span>LA-8150</span></td>
                                         <td><span>Casual Leave</span></td>
@@ -670,13 +667,13 @@
                                             <button type="button" class="btn btn-icon btn-sm" title="Approved"><i class="fa fa-check text-success"></i></button>
                                             <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
                                         </td>
-                                    </tr>                                
+                                    </tr>
                                     <tr>
                                         <td class="width45">
                                             <span class="avatar avatar-pink" data-toggle="tooltip" title="Avatar Name">GC</span>
                                         </td>
                                         <td>
-                                            <div class="font-15">Gary Camara</div>                                            
+                                            <div class="font-15">Gary Camara</div>
                                         </td>
                                         <td><span>LA-8795</span></td>
                                         <td><span>Medical Leave</span></td>
@@ -692,7 +689,7 @@
                                             <img class="avatar" src="../assets/images/xs/avatar1.jpg"  data-toggle="tooltip" title="Avatar Name"/>
                                         </td>
                                         <td>
-                                            <div class="font-15">Maryam Amiri</div>                                            
+                                            <div class="font-15">Maryam Amiri</div>
                                         </td>
                                         <td><span>LA-0258</span></td>
                                         <td><span>Casual Leave</span></td>
@@ -708,7 +705,7 @@
                                             <img class="avatar" src="../assets/images/xs/avatar2.jpg"  data-toggle="tooltip" title="Avatar Name"/>
                                         </td>
                                         <td>
-                                            <div class="font-15">Frank Camly</div>                                            
+                                            <div class="font-15">Frank Camly</div>
                                         </td>
                                         <td><span>LA-1515</span></td>
                                         <td><span>Casual Leave</span></td>
@@ -726,7 +723,7 @@
                 </div>
             </div>
         </div>
-    </div>            
+    </div>
 </div>
 
 <div class="section-body">
@@ -746,6 +743,359 @@
             </div>
         </div>
     </footer>
-</div>    
+</div>
+
+
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            {!! Form::open(['url' => '', 'method' => 'post' ,'name' => 'employeesave', 'id'=>'employeesave','class'=>'employeesave']) !!}
+            {{-- {!! Form::hidden('code',null,['class' => 'form-control','id'=>'code', 'placeholder' => 'User Name','autocomplete'=>'off']) !!} --}}
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Employee</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row clearfix">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::text('user_name',null,['class' => 'form-control','id'=>'user_name', 'placeholder' => 'User Name','autocomplete'=>'off']) !!}
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::text('password',null,['class' => 'form-control','id'=>'password', 'placeholder' => 'Password','autocomplete'=>'off']) !!}
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::text('cpassword',null,['class' => 'form-control','id'=>'cpassword', 'placeholder' => 'Confirm Password','autocomplete'=>'off']) !!}
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::text('first_name',null,['class' => 'form-control','id'=>'first_name', 'placeholder' => 'First Name','autocomplete'=>'off']) !!}
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::text('last_name',null,['class' => 'form-control','id'=>'last_name', 'placeholder' => 'Last Name','autocomplete'=>'off']) !!}
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::select('gender', [' '=>'Select Gender','m' => 'Male', 'f' => 'Female','o'=> 'Other'],['id'=>'gender','placeholder=>Select Gender','class'=>'form-control show-tick']); !!}
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::text('mob_no',null,['class' => 'form-control','id'=>'mob_no', 'placeholder' => 'Mobile No.','autocomplete'=>'off']) !!}
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::text('email',null,['class' => 'form-control','id'=>'email', 'placeholder' => 'Email Address.','autocomplete'=>'off']) !!}
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::select('roll_type', [' '=>'Select Roll Type','0' => 'Super Admin', '1' => 'Admin','2'=> 'Employee'],['placeholder=>Select Role','id'=>'roll_type','class'=>'form-control show-tick']); !!}
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::select('emp_department_type', [' '=>'Select Department','1' => 'Dept 1', '2' => 'Dept 2'],['id'=>'emp_department_type','placeholder=>Select Role','class'=>'form-control show-tick']); !!}
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group mt-2 mb-3">
+                            <input type="file" class="dropify">
+                            <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group">
+                            {!! Form::text('emp_facebook_link',null,['class' => 'form-control','id'=>'emp_facebook_link', 'placeholder' => 'Facebook','autocomplete'=>'off']) !!}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group">
+                            {!! Form::text('emp_twitter_link',null,['class' => 'form-control','id'=>'emp_twitter_link', 'placeholder' => 'Twitter','autocomplete'=>'off']) !!}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group">
+                            {!! Form::text('emp_linkedin_link',null,['class' => 'form-control','id'=>'emp_linkedin_link', 'placeholder' => 'Linkedin','autocomplete'=>'off']) !!}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                {!! Form::submit('Save changes',['class' => 'btn btn-primary','type'=>'submit','id'=>'save']) !!}
+            </div>
+            {!! Form::close() !!}
+        </div>
+    </div>
+</div>
+@endsection
+
+@section('script')
+<script>
+    $(document).ready(function() {
+
+        $('#employeesave').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: '',
+                invalid: '',
+                validating: '',
+            },
+            fields: {
+                user_name: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Enter User Name',
+                        },
+
+                    }
+                },
+                first_name: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Enter First Name',
+                        },
+
+                    }
+                },
+                last_name: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Enter Last Name',
+                        },
+
+                    }
+                },
+                password: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Enter Password',
+                        },
+                        identical: {
+                        field: 'cpassword',
+                        message: 'The password and its confirm are not the same'
+                    }
+
+                    }
+                },
+                cpassword: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Enter Confirm Password',
+                        },
+                        identical: {
+                        field: 'password',
+                        message: 'The password and its confirm are not the same'
+                    }
+
+                    }
+                },
+                gender: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Select Gender',
+                        },
+
+                    }
+                },
+                mob_no: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Enter Mobile No',
+                        },
+
+                    }
+                },
+                email: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Enter Email Address',
+                        },
+                        emailAddress: {
+                        message: 'The value is not a valid email address'
+                        }
+
+                    }
+                },
+                roll_type: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Select Roll Type',
+                        },
+
+                    }
+                },
+                emp_department_type: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Select Dept. Type',
+                        },
+
+                    }
+                },
+                emp_facebook_link: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Enter Facebook Link',
+                        },
+
+                    }
+                },
+                emp_linkedin_link: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Enter Linkedin Link',
+                        },
+
+                    }
+                },
+                emp_twitter_link: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Enter Twitter Link',
+                        },
+
+                    }
+                },
+
+            }
+        }).on('success.form.bv', function(e) {
+            e.preventDefault();
+            employeeSave();
+        });
+
+        function employeeSave(){
+            $('.page-loader-wrapper').show();
+
+            var user_name=$('#user_name').val();
+            var password=$('#password').val();
+            var cpassword=$('#cpassword').val();
+            var first_name=$('#first_name').val();
+            var last_name=$('#last_name').val();
+            var gender=$('input[name=gender]').val();
+            var mob_no=$('#mob_no').val();
+            var email=$('#email').val();
+            var roll_type=$('input[name=roll_type]').val();
+            var emp_department_type=$('input[name=emp_department_type]').val();
+            var emp_facebook_link=$('#emp_facebook_link').val();
+            var emp_twitter_link=$('#emp_twitter_link').val();
+            var emp_linkedin_link=$('#emp_linkedin_link').val();
+
+
+            var code = $('#code').val();
+
+            var employeeSaveUpdate = new FormData();
+            employeeSaveUpdate.append('user_name',user_name);
+            employeeSaveUpdate.append('password',password);
+            employeeSaveUpdate.append('cpassword',cpassword);
+            employeeSaveUpdate.append('first_name',first_name);
+            employeeSaveUpdate.append('last_name',last_name);
+            employeeSaveUpdate.append('gender',gender);
+            employeeSaveUpdate.append('mob_no',mob_no);
+            employeeSaveUpdate.append('email',email);
+            employeeSaveUpdate.append('roll_type',roll_type);
+            employeeSaveUpdate.append('emp_department_type',emp_department_type);
+            employeeSaveUpdate.append('emp_facebook_link',emp_facebook_link);
+            employeeSaveUpdate.append('emp_twitter_link',emp_twitter_link);
+            employeeSaveUpdate.append('emp_linkedin_link',emp_linkedin_link);
+
+
+
+
+
+
+            if (code!= '') {
+                employeeSaveUpdate.append('code', code);
+            }
+            employeeSaveUpdate.append('_token', '{{csrf_token()}}');
+
+            $.ajax({
+                type: 'post',
+                url: "{{route('employeeSaveUpdate')}}",
+                data: employeeSaveUpdate,
+                processData: false,
+                contentType: false,
+                dataType: "json",
+
+                success: function(data) {
+                    var msg = "";
+                    if (data.status == 1) {
+                        msg = "Employee Save Successfully";
+
+
+                    } else if (data.status == 2) {
+                        msg = "Employee Left Update Successfully";
+                    }
+
+                    $.confirm({
+                        title: 'Success!!',
+                        type: 'green',
+                        icon: 'fa fa-warning',
+                        content: msg,
+                    });
+                    $('.page-loader-wrapper').hide();
+
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    var msg = "";
+                    if (jqXHR.status !== 422 && jqXHR.status !== 400) {
+                        msg += "<strong>" + jqXHR.status + ": " + errorThrown + "</strong>";
+                    } else {
+                        if (jqXHR.responseJSON.hasOwnProperty('exception')) {
+                            if (jqXHR.responseJSON.exception_code == 23000) {
+                                msg += "Some Sql Exception Occured";
+                            } else {
+                                msg += "Exception: <strong>" + jqXHR.responseJSON.exception_message + "</strong>";
+                            }
+                        } else {
+                            msg += "Error(s):<strong><ul>";
+                            $.each(jqXHR.responseJSON['errors'], function(key, value) {
+                                msg += "<li>" + value + "</li>";
+                            });
+                            msg += "</ul></strong>";
+                        }
+                        $.alert({
+                            title: 'Error!!',
+                            type: 'red',
+                            icon: 'fa fa-warning',
+                            content: msg,
+                        });
+                    }
+                    $('.page-loader-wrapper').hide();
+
+                },
+            });
+        }
+});
+</script>
 
 @endsection
