@@ -85,3 +85,4 @@ Route::post('employeeSaveUpdate', 'UserController@employeeSaveUpdate')->name('em
 Route::post('employeeDatatable', 'UserController@employeeDatatable');
 Route::post('employeeEditData', 'UserController@employeeEditData');
 Route::post('employeeDelete', 'UserController@employeeDelete');
+});

@@ -78,6 +78,7 @@ class UserController extends Controller
         $response = array(
             'exception' => true,
             'exception_message' => $e->getMessage(),
+          
         );
         $statuscode=400;
      } finally{

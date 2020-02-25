@@ -784,7 +784,7 @@
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="form-group">
-                            {!! Form::select('gender', [' '=>'Select Gender','m' => 'Male', 'f' => 'Female','o'=> 'Other'],['id'=>'gender','placeholder=>Select Gender','class'=>'form-control show-tick']); !!}
+                            {!! Form::select('gender', [' '=>'Select Gender','M' => 'Male', 'F' => 'Female','o'=> 'Other'],null,['id'=>'gender','class'=>'form-control']) !!}
 
                         </div>
                     </div>
@@ -801,13 +801,14 @@
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="form-group">
-                            {!! Form::select('roll_type', [' '=>'Select Roll Type','0' => 'Super Admin', '1' => 'Admin','2'=> 'Employee'],['placeholder=>Select Role','id'=>'roll_type','class'=>'form-control show-tick']); !!}
+                            {!! Form::select('roll_type', [' '=>'Select Roll Type','0' => 'Super Admin', '1' => 'Admin','2'=> 'Employee'],null,['id'=>'roll_type','class'=>'form-control']) !!}
+
 
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="form-group">
-                            {!! Form::select('emp_department_type', [' '=>'Select Department','1' => 'Dept 1', '2' => 'Dept 2'],['id'=>'emp_department_type','placeholder=>Select Role','class'=>'form-control show-tick']); !!}
+                            {!! Form::select('emp_department_type', [' '=>'Select Department','1' => 'Dept 1', '2' => 'Dept 2'],null,['id'=>'emp_department_type','class'=>'form-control']) !!}
                         </div>
                     </div>
 
@@ -993,7 +994,10 @@
             employeeSave();
         });
 
-        function employeeSave(){
+        
+});
+
+function employeeSave(){
             $('.page-loader-wrapper').show();
 
             var user_name=$('#user_name').val();
@@ -1001,17 +1005,16 @@
             var cpassword=$('#cpassword').val();
             var first_name=$('#first_name').val();
             var last_name=$('#last_name').val();
-            var gender=$('input[name=gender]').val();
+            var gender=$('#gender').val();
             var mob_no=$('#mob_no').val();
             var email=$('#email').val();
-            var roll_type=$('input[name=roll_type]').val();
-            var emp_department_type=$('input[name=emp_department_type]').val();
+            var roll_type=$('#roll_type').val();
+            var emp_department_type=$('#emp_department_type').val();
             var emp_facebook_link=$('#emp_facebook_link').val();
             var emp_twitter_link=$('#emp_twitter_link').val();
             var emp_linkedin_link=$('#emp_linkedin_link').val();
 
-
-            var code = $('#code').val();
+     var code = $('#code').val();
 
             var employeeSaveUpdate = new FormData();
             employeeSaveUpdate.append('user_name',user_name);
@@ -1047,55 +1050,59 @@
                 dataType: "json",
 
                 success: function(data) {
+                    $('#exampleModal').modal('hide');
+                   $('.page-loader-wrapper').hide();
                     var msg = "";
                     if (data.status == 1) {
                         msg = "Employee Save Successfully";
 
 
                     } else if (data.status == 2) {
-                        msg = "Employee Left Update Successfully";
+                        msg = "Employee Update Successfully";
                     }
 
                     $.confirm({
                         title: 'Success!!',
                         type: 'green',
-                        icon: 'fa fa-warning',
+                        icon: 'fa fa-check',
                         content: msg,
                     });
-                    $('.page-loader-wrapper').hide();
+                  
 
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
-                    var msg = "";
-                    if (jqXHR.status !== 422 && jqXHR.status !== 400) {
-                        msg += "<strong>" + jqXHR.status + ": " + errorThrown + "</strong>";
-                    } else {
-                        if (jqXHR.responseJSON.hasOwnProperty('exception')) {
-                            if (jqXHR.responseJSON.exception_code == 23000) {
-                                msg += "Some Sql Exception Occured";
-                            } else {
-                                msg += "Exception: <strong>" + jqXHR.responseJSON.exception_message + "</strong>";
-                            }
-                        } else {
-                            msg += "Error(s):<strong><ul>";
-                            $.each(jqXHR.responseJSON['errors'], function(key, value) {
-                                msg += "<li>" + value + "</li>";
-                            });
-                            msg += "</ul></strong>";
-                        }
-                        $.alert({
-                            title: 'Error!!',
-                            type: 'red',
-                            icon: 'fa fa-warning',
-                            content: msg,
-                        });
-                    }
+                  
                     $('.page-loader-wrapper').hide();
+                    var msg = "";
+                    var msg = "<strong>Failed to Approve data.</strong><br/>";
+                if (jqXHR.status !== 422 && jqXHR.status !== 400) {
+                    msg += "<strong>" + jqXHR.status + ": " + errorThrown + "</strong>";
+                } else {
+                    if (jqXHR.responseJSON.hasOwnProperty('exception')) {
+                        if (jqXHR.responseJSON.exception_code == 23000) {
+                            msg += "Data Already Used!! Cannot Be Approve.";
+                        }
+                    } else {
+                        msg += "Error(s):<strong><ul>";
+                        $.each(jqXHR.responseJSON['errors'], function (key, value) {
+                            
+                            msg += "<li>" + value + "</li>";
+                        });
+                        msg += "</ul></strong>";
+                    }
+                    alert(msg)
+                }
+                $.alert({
+                    type: 'red',
+                    icon: 'fa fa-warning',
+                    title: 'Error!!',
+                    content: msg
+                });
+                   
 
                 },
             });
         }
-});
 </script>
 
 @endsection

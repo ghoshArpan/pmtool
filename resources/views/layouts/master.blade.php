@@ -12,8 +12,7 @@
         <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
       <link rel="stylesheet" href="{{asset('assets/css/summernote.css')}}">
       <link rel="stylesheet" href="{{asset('css/dropify.min.css')}}">
-        <link rel="stylesheet" href="{{asset('css/datatables.min.css')}}">
-        <link rel="stylesheet" href="{{asset('css/jquery-confirm.min.css')}}">
+       
         <link rel="stylesheet" href="{{asset('assets/css/c3.min.css')}}">
 
 
@@ -21,6 +20,8 @@
         <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/theme1.css')}}">
         <link rel="stylesheet" href="{{asset('css/bootstrapValidator.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/datatables.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/jquery-confirm.min.css')}}">
     </head>
 
     <body class="font-montserrat">
@@ -408,12 +409,13 @@
             @yield('content')
         </div>
         <!-- Scripts -->
-        <script src="{{asset('assets/js/lib.vendor.bundle.js')}}"></script>
+       
+        <script src="{{asset('js/jquery.min.js')}}"></script>
+       
         <script src="{{asset('js/datatables.min.js')}}"></script>
         <script src="{{asset('js/jquery-confirm.min.js')}}"></script>
         <script src="{{asset('assets/js/lib.vendor.bundle.js')}}"></script>
-
-
+        <script src="{{asset('assets/js/lib.vendor.bundle.js')}}"></script>
         <script src="{{asset('assets/js/counterup.bundle.js')}}"></script>
         <script src="{{asset('js/dropify.js')}}"></script>
         <script src="{{asset('js/dropify.min.js')}}"></script>
