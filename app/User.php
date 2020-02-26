@@ -41,6 +41,6 @@ class User extends Authenticatable
 
     public function department_name()
     {
-        return $this->hasOne('App\tbl_departments','emp_department_type','id');
+        return $this->hasOne('App\tbl_departments','id','emp_department_type');
     }
 }

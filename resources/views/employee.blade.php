@@ -2,7 +2,15 @@
 
 @section('content')
 
-
+<style>
+    .dropdown-menu {
+        /* right: 67%;*/
+        /* left: auto; */
+        min-width: 0px !important;
+        width: 230px !important;
+        padding: 1em !important;
+    }
+</style>
 <div id="page_top" class="section-body">
     <div class="container-fluid">
         <div class="page-header">
@@ -167,7 +175,6 @@
         <div class="d-flex justify-content-between align-items-center mb-3">
             <ul class="nav nav-tabs page-header-tab">
                 <li class="nav-item"><a class="nav-link active" id="Employee-tab" data-toggle="tab" href="#Employee-list">All</a></li>
-                <li class="nav-item"><a class="nav-link" id="Employee-tab" data-toggle="tab" href="#Employee-view">View</a></li>
                 <li class="nav-item"><a class="nav-link" id="Employee-tab" data-toggle="tab" href="#Employee-Request">Leave Request</a></li>
             </ul>
             <div class="header-action">
@@ -193,7 +200,7 @@
                     <div class="card-body w_sparkline">
                         <div class="details">
                             <span">New Employee</span>
-                            <h3 class="mb-0 counter">124</h3>
+                                <h3 class="mb-0 counter">124</h3>
                         </div>
                         <div class="w_chart">
                             <span id="mini-bar-chart2" class="mini-bar-chart"></span>
@@ -248,393 +255,25 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-hover table-striped table-vcenter text-nowrap mb-0">
+                            <table class="table table-striped table-bordered table-hover notice-types-table" id="list-employee">
                                 <thead>
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
+                                        <th>Mobile No</th>
                                         <th>Employee ID</th>
-                                        <th>Phone</th>
+                                        <th>Department Name</th>
                                         <th>Join Date</th>
-                                        <th>Role</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="w40">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
-                                                <span class="custom-control-label">&nbsp;</span>
-                                            </label>
-                                        </td>
-                                        <td class="d-flex">
-                                            <span class="avatar avatar-blue" data-toggle="tooltip" title="" data-original-title="Avatar Name">MN</span>
-                                            <div class="ml-3">
-                                                <h6 class="mb-0">Marshall Nichols</h6>
-                                                <span class="text-muted">marshall-n@gmail.com</span>
-                                            </div>
-                                        </td>
-                                        <td><span>LA-0215</span></td>
-                                        <td><span>+ 264-625-1526</span></td>
-                                        <td>12 Jun, 2015</td>
-                                        <td>Web Designer</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w40">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
-                                                <span class="custom-control-label">&nbsp;</span>
-                                            </label>
-                                        </td>
-                                        <td class="d-flex">
-                                            <img class="avatar" src="../assets/images/xs/avatar2.jpg" data-toggle="tooltip" title="" data-original-title="Avatar Name"/>
-                                            <div class="ml-3">
-                                                <h6 class="mb-0">Debra Stewart</h6>
-                                                <span class="text-muted">marshall-n@gmail.com</span>
-                                            </div>
-                                        </td>
-                                        <td><span>LA-0216</span></td>
-                                        <td><span>+ 264-625-4613</span></td>
-                                        <td>28 July, 2015</td>
-                                        <td>Web Developer</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w40">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
-                                                <span class="custom-control-label">&nbsp;</span>
-                                            </label>
-                                        </td>
-                                        <td class="d-flex">
-                                            <span class="avatar avatar-green" data-toggle="tooltip" title="" data-original-title="Avatar Name">JH</span>
-                                            <div class="ml-3">
-                                                <h6 class="mb-0">Jane Hunt</h6>
-                                                <span class="text-muted">jane-hunt@gmail.com</span>
-                                            </div>
-                                        </td>
-                                        <td><span>LA-0215</span></td>
-                                        <td><span>+ 264-625-4512</span></td>
-                                        <td>13 Jun, 2015</td>
-                                        <td>Web Designer</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w40">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
-                                                <span class="custom-control-label">&nbsp;</span>
-                                            </label>
-                                        </td>
-                                        <td class="d-flex">
-                                            <img class="avatar" src="../assets/images/xs/avatar3.jpg" data-toggle="tooltip" title="" data-original-title="Avatar Name"/>
-                                            <div class="ml-3">
-                                                <h6 class="mb-0">Susie Willis</h6>
-                                                <span class="text-muted">sussie-w@gmail.com</span>
-                                            </div>
-                                        </td>
-                                        <td><span>LA-0116</span></td>
-                                        <td><span>+ 264-625-4152</span></td>
-                                        <td>9 May, 2016</td>
-                                        <td>Web Developer</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w40">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
-                                                <span class="custom-control-label">&nbsp;</span>
-                                            </label>
-                                        </td>
-                                        <td class="d-flex">
-                                            <span class="avatar avatar-azure" data-toggle="tooltip" title="" data-original-title="Avatar Name">DD</span>
-                                            <div class="ml-3">
-                                                <h6 class="mb-0">Darryl Day</h6>
-                                                <span class="text-muted">darryl.day@gmail.com</span>
-                                            </div>
-                                        </td>
-                                        <td><span>LA-0215</span></td>
-                                        <td><span>+ 264-625-8596</span></td>
-                                        <td>24 Jun, 2015</td>
-                                        <td>Web Developer</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w40">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
-                                                <span class="custom-control-label">&nbsp;</span>
-                                            </label>
-                                        </td>
-                                        <td class="d-flex">
-                                            <span class="avatar avatar-blue" data-toggle="tooltip" title="" data-original-title="Avatar Name">MN</span>
-                                            <div class="ml-3">
-                                                <h6 class="mb-0">Marshall Nichols</h6>
-                                                <span class="text-muted">marshall-n@gmail.com</span>
-                                            </div>
-                                        </td>
-                                        <td><span>LA-0215</span></td>
-                                        <td><span>+ 264-625-7845</span></td>
-                                        <td>11 Jun, 2015</td>
-                                        <td>Web Designer</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w40">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
-                                                <span class="custom-control-label">&nbsp;</span>
-                                            </label>
-                                        </td>
-                                        <td class="d-flex">
-                                            <img class="avatar" src="../assets/images/xs/avatar2.jpg" data-toggle="tooltip" title="" data-original-title="Avatar Name"/>
-                                            <div class="ml-3">
-                                                <h6 class="mb-0">Debra Stewart</h6>
-                                                <span class="text-muted">marshall-n@gmail.com</span>
-                                            </div>
-                                        </td>
-                                        <td><span>LA-0216</span></td>
-                                        <td><span>+ 264-625-2583</span></td>
-                                        <td>28 Jun, 2018</td>
-                                        <td>Web Developer</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w40">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
-                                                <span class="custom-control-label">&nbsp;</span>
-                                            </label>
-                                        </td>
-                                        <td class="d-flex">
-                                            <span class="avatar avatar-indigo" data-toggle="tooltip" title="" data-original-title="Avatar Name">MN</span>
-                                            <div class="ml-3">
-                                                <h6 class="mb-0">Marshall Nichols</h6>
-                                                <span class="text-muted">marshall-n@gmail.com</span>
-                                            </div>
-                                        </td>
-                                        <td><span>LA-0215</span></td>
-                                        <td><span>+ 264-625-2583</span></td>
-                                        <td>24 Feb, 2019</td>
-                                        <td>Android Developer</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w40">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
-                                                <span class="custom-control-label">&nbsp;</span>
-                                            </label>
-                                        </td>
-                                        <td class="d-flex">
-                                            <img class="avatar" src="../assets/images/xs/avatar2.jpg" data-toggle="tooltip" title="" data-original-title="Avatar Name"/>
-                                            <div class="ml-3">
-                                                <h6 class="mb-0">Debra Stewart</h6>
-                                                <span class="text-muted">marshall-n@gmail.com</span>
-                                            </div>
-                                        </td>
-                                        <td><span>LA-0216</span></td>
-                                        <td><span>+ 264-625-2589</span></td>
-                                        <td>28 Jun, 2015</td>
-                                        <td>IOS Developer</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w40">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
-                                                <span class="custom-control-label">&nbsp;</span>
-                                            </label>
-                                        </td>
-                                        <td class="d-flex">
-                                            <img class="avatar" src="../assets/images/xs/avatar2.jpg" data-toggle="tooltip" title="" data-original-title="Avatar Name"/>
-                                            <div class="ml-3">
-                                                <h6 class="mb-0">Debra Stewart</h6>
-                                                <span class="text-muted">marshall-n@gmail.com</span>
-                                            </div>
-                                        </td>
-                                        <td><span>LA-0216</span></td>
-                                        <td><span>+ 264-625-2356</span></td>
-                                        <td>28 Jun, 2015</td>
-                                        <td>Team Leader</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
+
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="Employee-view" role="tabpanel">
-                <div class="row">
-                    <div class="col-lg-4 col-md-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="media mb-4">
-                                    <img class="avatar avatar-xl mr-3" src="../assets/images/sm/avatar1.jpg" alt="avatar">
-                                    <div class="media-body">
-                                        <h5 class="m-0">Sara Hopkins</h5>
-                                        <p class="text-muted mb-0">Webdeveloper</p>
-                                        <ul class="social-links list-inline mb-0 mt-2">
-                                            <li class="list-inline-item"><a href="javascript:void(0)" title="" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" title="" data-toggle="tooltip" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" title="" data-toggle="tooltip" data-original-title="1234567890"><i class="fa fa-phone"></i></a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" title="" data-toggle="tooltip" data-original-title="@skypename"><i class="fa fa-skype"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <p class="mb-4">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                                <button class="btn btn-outline-primary btn-sm"><span class="fa fa-twitter"></span> Follow</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">Statistics</h3>
-                                <div class="card-options">
-                                    <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
-                                    <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="text-center">
-                                    <div class="row">
-                                        <div class="col-6 pb-3">
-                                            <label class="mb-0">Project</label>
-                                            <h4 class="font-30 font-weight-bold">45</h4>
-                                        </div>
-                                        <div class="col-6 pb-3">
-                                            <label class="mb-0">Growth</label>
-                                            <h4 class="font-30 font-weight-bold">87%</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="d-block">Laravel<span class="float-right">77%</span></label>
-                                    <div class="progress progress-xs">
-                                        <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%;"></div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="d-block">HTML<span class="float-right">50%</span></label>
-                                    <div class="progress progress-xs">
-                                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-0">
-                                    <label class="d-block">Photoshop <span class="float-right">23%</span></label>
-                                    <div class="progress progress-xs">
-                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100" style="width: 23%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <ul class="new_timeline mt-3">
-                                    <li>
-                                        <div class="bullet pink"></div>
-                                        <div class="time">11:00am</div>
-                                        <div class="desc">
-                                            <h3>Attendance</h3>
-                                            <h4>Computer Class</h4>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="bullet pink"></div>
-                                        <div class="time">11:30am</div>
-                                        <div class="desc">
-                                            <h3>Added an interest</h3>
-                                            <h4>“Volunteer Activities”</h4>
-                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="bullet green"></div>
-                                        <div class="time">12:00pm</div>
-                                        <div class="desc">
-                                            <h3>Developer Team</h3>
-                                            <h4>Hangouts</h4>
-                                            <ul class="list-unstyled team-info margin-0 p-t-5">
-                                                <li><img src="../assets/images/xs/avatar1.jpg" alt="Avatar"></li>
-                                                <li><img src="../assets/images/xs/avatar2.jpg" alt="Avatar"></li>
-                                                <li><img src="../assets/images/xs/avatar3.jpg" alt="Avatar"></li>
-                                                <li><img src="../assets/images/xs/avatar4.jpg" alt="Avatar"></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="bullet green"></div>
-                                        <div class="time">2:00pm</div>
-                                        <div class="desc">
-                                            <h3>Responded to need</h3>
-                                            <a href="javascript:void(0)">“In-Kind Opportunity”</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="bullet orange"></div>
-                                        <div class="time">1:30pm</div>
-                                        <div class="desc">
-                                            <h3>Lunch Break</h3>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="bullet green"></div>
-                                        <div class="time">2:38pm</div>
-                                        <div class="desc">
-                                            <h3>Finish</h3>
-                                            <h4>Go to Home</h4>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div class="tab-pane fade" id="Employee-Request" role="tabpanel">
                 <div class="card">
                     <div class="card-body">
@@ -652,70 +291,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="width45">
-                                            <span class="avatar avatar-orange" data-toggle="tooltip" title="Avatar Name">DB</span>
-                                        </td>
-                                        <td>
-                                            <div class="font-15">Marshall Nichols</div>
-                                        </td>
-                                        <td><span>LA-8150</span></td>
-                                        <td><span>Casual Leave</span></td>
-                                        <td>24 July, 2019 to 26 July, 2019</td>
-                                        <td>Going to Family Function</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon btn-sm" title="Approved"><i class="fa fa-check text-success"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="width45">
-                                            <span class="avatar avatar-pink" data-toggle="tooltip" title="Avatar Name">GC</span>
-                                        </td>
-                                        <td>
-                                            <div class="font-15">Gary Camara</div>
-                                        </td>
-                                        <td><span>LA-8795</span></td>
-                                        <td><span>Medical Leave</span></td>
-                                        <td>20 July, 2019 to 26 July, 2019</td>
-                                        <td>Going to Development</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon btn-sm" title="Approved"><i class="fa fa-check text-success"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="width45">
-                                            <img class="avatar" src="../assets/images/xs/avatar1.jpg"  data-toggle="tooltip" title="Avatar Name"/>
-                                        </td>
-                                        <td>
-                                            <div class="font-15">Maryam Amiri</div>
-                                        </td>
-                                        <td><span>LA-0258</span></td>
-                                        <td><span>Casual Leave</span></td>
-                                        <td>21 July, 2019 to 26 July, 2019</td>
-                                        <td>Attend Birthday party</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon btn-sm" title="Approved"><i class="fa fa-check text-success"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="width45">
-                                            <img class="avatar" src="../assets/images/xs/avatar2.jpg"  data-toggle="tooltip" title="Avatar Name"/>
-                                        </td>
-                                        <td>
-                                            <div class="font-15">Frank Camly</div>
-                                        </td>
-                                        <td><span>LA-1515</span></td>
-                                        <td><span>Casual Leave</span></td>
-                                        <td>11 Aug, 2019 to 21 Aug, 2019</td>
-                                        <td>Going to Holiday</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon btn-sm" title="Approved"><i class="fa fa-check text-success"></i></button>
-                                            <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
+
                                 </tbody>
                             </table>
                         </div>
@@ -764,12 +340,12 @@
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="form-group">
-                            {!! Form::text('password',null,['class' => 'form-control','id'=>'password', 'placeholder' => 'Password','autocomplete'=>'off']) !!}
+                            {!! Form::password('password',['class' => 'form-control','id'=>'password', 'placeholder' => 'Password','autocomplete'=>'off']) !!}
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="form-group">
-                            {!! Form::text('cpassword',null,['class' => 'form-control','id'=>'cpassword', 'placeholder' => 'Confirm Password','autocomplete'=>'off']) !!}
+                            {!! Form::password('cpassword',['class' => 'form-control','id'=>'cpassword', 'placeholder' => 'Confirm Password','autocomplete'=>'off']) !!}
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
@@ -801,10 +377,18 @@
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="form-group">
-                            {!! Form::select('roll_type', [' '=>'Select Roll Type','0' => 'Super Admin', '1' => 'Admin','2'=> 'Employee'],null,['id'=>'roll_type','class'=>'form-control']) !!}
-
-
+                            {!! Form::text('joining_date',null,['class' => 'form-control','id'=>'joining_date', 'placeholder' => 'DD/MM/YYYY','autocomplete'=>'off']) !!}
                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::text('employee_id',null,['class' => 'form-control','id'=>'employee_id', 'placeholder' => 'Enter Employee Id','autocomplete'=>'off']) !!}
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::select('roll_type', [' '=>'Select Roll Type', '1' => 'Employee','2'=> 'Client'],null,['id'=>'roll_type','class'=>'form-control']) !!}
+                    </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="form-group">
@@ -814,10 +398,11 @@
 
                     <div class="col-12">
                         <div class="form-group mt-2 mb-3">
-                            <input type="file" class="dropify">
+                            <input type="file" class="dropify" id="up_image">
                             <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
                         </div>
                     </div>
+
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group">
                             {!! Form::text('emp_facebook_link',null,['class' => 'form-control','id'=>'emp_facebook_link', 'placeholder' => 'Facebook','autocomplete'=>'off']) !!}
@@ -845,12 +430,22 @@
         </div>
     </div>
 </div>
-@endsection
 
+@endsection
 @section('script')
 <script>
     $(document).ready(function() {
+        create_table();
+        $("#joining_date").datepicker({
+            autoclose: true,
+            format: 'dd/mm/yyyy',
+            todayHighlight: true
+        }).on('change', function(e) {
+            // Revalidate the date field
+            $('#employeesave').bootstrapValidator('revalidateField', 'joining_date');
 
+        });
+      
         $('#employeesave').bootstrapValidator({
             message: 'This value is not valid',
             feedbackIcons: {
@@ -893,9 +488,9 @@
                             message: 'Enter Password',
                         },
                         identical: {
-                        field: 'cpassword',
-                        message: 'The password and its confirm are not the same'
-                    }
+                            field: 'cpassword',
+                            message: 'The password and its confirm are not the same'
+                        }
 
                     }
                 },
@@ -906,9 +501,9 @@
                             message: 'Enter Confirm Password',
                         },
                         identical: {
-                        field: 'password',
-                        message: 'The password and its confirm are not the same'
-                    }
+                            field: 'password',
+                            message: 'The password and its confirm are not the same'
+                        }
 
                     }
                 },
@@ -937,7 +532,7 @@
                             message: 'Enter Email Address',
                         },
                         emailAddress: {
-                        message: 'The value is not a valid email address'
+                            message: 'The value is not a valid email address'
                         }
 
                     }
@@ -987,6 +582,26 @@
 
                     }
                 },
+                // joining_date:{
+                //     validators: {
+                //     date: {
+                //         format: 'DD/MM/YYYY',
+                //         message: 'The format is dd/mm/yyyy'
+                //     },
+                //     notEmpty: {
+                //         message: 'The field can not be empty'
+                //     }
+                // }
+                // },
+                employee_id: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Enter Employee Id',
+                        },
+
+                    }
+                }
 
             }
         }).on('success.form.bv', function(e) {
@@ -994,87 +609,243 @@
             employeeSave();
         });
 
-        
-});
+        var table = $('#list-employee').DataTable();
+        table.on('draw.dt', function() {
 
-function employeeSave(){
-            $('.page-loader-wrapper').show();
+            $('.edit-button').click(function() {
+                var leasee_code = this.id;
+                //alert(leasee_code);
 
-            var user_name=$('#user_name').val();
-            var password=$('#password').val();
-            var cpassword=$('#cpassword').val();
-            var first_name=$('#first_name').val();
-            var last_name=$('#last_name').val();
-            var gender=$('#gender').val();
-            var mob_no=$('#mob_no').val();
-            var email=$('#email').val();
-            var roll_type=$('#roll_type').val();
-            var emp_department_type=$('#emp_department_type').val();
-            var emp_facebook_link=$('#emp_facebook_link').val();
-            var emp_twitter_link=$('#emp_twitter_link').val();
-            var emp_linkedin_link=$('#emp_linkedin_link').val();
+                var datas = {
+                    'leasee_code': leasee_code,
+                    '_token': $('input[name="_token"]').val()
+                };
+                redirectPost('{{url("leasee_edit")}}', datas);
+            });
 
-     var code = $('#code').val();
+            $('.delete-button').click(function() {
 
-            var employeeSaveUpdate = new FormData();
-            employeeSaveUpdate.append('user_name',user_name);
-            employeeSaveUpdate.append('password',password);
-            employeeSaveUpdate.append('cpassword',cpassword);
-            employeeSaveUpdate.append('first_name',first_name);
-            employeeSaveUpdate.append('last_name',last_name);
-            employeeSaveUpdate.append('gender',gender);
-            employeeSaveUpdate.append('mob_no',mob_no);
-            employeeSaveUpdate.append('email',email);
-            employeeSaveUpdate.append('roll_type',roll_type);
-            employeeSaveUpdate.append('emp_department_type',emp_department_type);
-            employeeSaveUpdate.append('emp_facebook_link',emp_facebook_link);
-            employeeSaveUpdate.append('emp_twitter_link',emp_twitter_link);
-            employeeSaveUpdate.append('emp_linkedin_link',emp_linkedin_link);
+                var reply = confirm('Are you sure to delete the record?');
+                if (!reply) {
+                    return false;
+                }
+                var dlt_code = this.id;
+                $.ajax({
+                    type: 'post',
+                    url: "{{route('employeeUserDelete')}}",
+                    data: {
+                        'dlt_code': dlt_code,
+                        '_token': $('input[name="_token"]').val()
+                    },
+                    dataType: 'json',
+                    success: function(datam) {
+                       if (datam.status == 1) {
+                            $.confirm({
+                                type: 'green',
+                                icon: 'fa fa-check',
+                                title: 'Success!!',
+                                content: '<strong>SUCCESS:</strong> Record deleted successfully.'
+                            });
+                        } else {
+                            $.confirm({
+                                type: 'red',
+                                icon: 'fa fa-warning',
+                                title: 'Error!!',
+                                content: '<strong>SUCCESS:</strong> Failed to delete data.'
+                            });
+                        }
+                        create_table();
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        var msg = "<strong>Failed to Delete data.</strong><br/>";
+                        if (jqXHR.status !== 422 && jqXHR.status !== 400) {
+                            msg += "<strong>" + jqXHR.status + ": " + errorThrown + "</strong>";
+                        } else {
+                            if (jqXHR.responseJSON.hasOwnProperty('exception')) {
+                                if (jqXHR.responseJSON.exception_code == 23000) {
+                                    msg += "Data Already Used!! Cannot Be Deleted.";
+                                }
+                            } else {
+                                msg += "Error(s):<strong><ul>";
+                                $.each(jqXHR.responseJSON, function(key, value) {
+                                    msg += "<li>" + value + "</li>";
+                                });
+                                msg += "</ul></strong>";
+                            }
+                        }
+                        $.alert({
+                            type: 'red',
+                            icon: 'fa fa-warning',
+                            title: 'Error!!',
+                            content: msg
+                        });
 
-
-
-
-
-
-            if (code!= '') {
-                employeeSaveUpdate.append('code', code);
-            }
-            employeeSaveUpdate.append('_token', '{{csrf_token()}}');
-
-            $.ajax({
-                type: 'post',
-                url: "{{route('employeeSaveUpdate')}}",
-                data: employeeSaveUpdate,
-                processData: false,
-                contentType: false,
-                dataType: "json",
-
-                success: function(data) {
-                    $('#exampleModal').modal('hide');
-                   $('.page-loader-wrapper').hide();
-                    var msg = "";
-                    if (data.status == 1) {
-                        msg = "Employee Save Successfully";
-
-
-                    } else if (data.status == 2) {
-                        msg = "Employee Update Successfully";
                     }
+                });
 
-                    $.confirm({
-                        title: 'Success!!',
-                        type: 'green',
-                        icon: 'fa fa-check',
-                        content: msg,
-                    });
-                  
+            });
+        });
+    });
 
+    function create_table() {
+
+        $("#list-employee").dataTable().fnDestroy();
+        $('#list-employee').dataTable({
+
+            "processing": true,
+            "serverSide": true,
+            "ajax": {
+                url: "{{route('employeeUsersDatatable')}}",
+                type: "post",
+                data: {
+                    '_token': $('input[name="_token"]').val()
                 },
-                error: function(jqXHR, textStatus, errorThrown) {
-                  
-                    $('.page-loader-wrapper').hide();
-                    var msg = "";
-                    var msg = "<strong>Failed to Approve data.</strong><br/>";
+                dataSrc: "record_details",
+            },
+            "dataType": 'json',
+            "columnDefs": [{
+                    className: "table-text",
+                    "targets": "_all"
+                },
+                {
+                    "targets": 0,
+                    "data": "id",
+                    "defaultContent": "",
+                    "searchable": false,
+                    "sortable": false,
+                },
+                {
+                    "targets": 1,
+                    "data": "first_name",
+                    "searchable": true,
+                    "sortable": true,
+                },
+                {
+                    "targets": 2,
+                    "data": "mob_no",
+                    "searchable": true,
+                    "sortable": true,
+                },
+                {
+                    "targets": 3,
+                    "data": "employee_id",
+                    "searchable": true,
+                    "sortable": true,
+                },
+                {
+                    "targets": 4,
+                    "data": "dept_name",
+                    "searchable": true,
+                    "sortable": true,
+                },
+                {
+                    "targets": 5,
+                    "data": "joining_date",
+                    "searchable": true,
+                    "sortable": true,
+                },
+                {
+                    "targets": -1,
+                    "data": 'action',
+                    "searchable": false,
+                    "sortable": false,
+                },
+            ]
+
+        });
+    }
+
+    function employeeSave() {
+        $('.page-loader-wrapper').show();
+
+        var user_name = $('#user_name').val();
+        var password = $('#password').val();
+        var cpassword = $('#cpassword').val();
+        var first_name = $('#first_name').val();
+        var last_name = $('#last_name').val();
+        var gender = $('#gender').val();
+        var mob_no = $('#mob_no').val();
+        var email = $('#email').val();
+        var roll_type = $('#roll_type').val();
+        var emp_department_type = $('#emp_department_type').val();
+        var emp_facebook_link = $('#emp_facebook_link').val();
+        var emp_twitter_link = $('#emp_twitter_link').val();
+        var emp_linkedin_link = $('#emp_linkedin_link').val();
+        var up_image = $('#up_image')[0].files;
+        var employee_id = $('#employee_id').val();
+        var joining_date = $('#joining_date').val();
+        var code = $('#code').val();
+
+        var employeeSaveUpdate = new FormData();
+        employeeSaveUpdate.append('user_name', user_name);
+        employeeSaveUpdate.append('password', password);
+        employeeSaveUpdate.append('cpassword', cpassword);
+        employeeSaveUpdate.append('first_name', first_name);
+        employeeSaveUpdate.append('last_name', last_name);
+        employeeSaveUpdate.append('gender', gender);
+        employeeSaveUpdate.append('mob_no', mob_no);
+        employeeSaveUpdate.append('email', email);
+        employeeSaveUpdate.append('roll_type', roll_type);
+        employeeSaveUpdate.append('emp_department_type', emp_department_type);
+        employeeSaveUpdate.append('emp_facebook_link', emp_facebook_link);
+        employeeSaveUpdate.append('emp_twitter_link', emp_twitter_link);
+        employeeSaveUpdate.append('emp_linkedin_link', emp_linkedin_link);
+        employeeSaveUpdate.append('up_image', up_image[0]);
+        employeeSaveUpdate.append('joining_date', joining_date);
+        employeeSaveUpdate.append('employee_id', employee_id);
+
+
+
+
+
+        if (code != '') {
+            employeeSaveUpdate.append('code', code);
+        }
+        employeeSaveUpdate.append('_token', '{{csrf_token()}}');
+
+        $.ajax({
+            type: 'post',
+            url: "{{route('employeeSaveUpdate')}}",
+            data: employeeSaveUpdate,
+            processData: false,
+            contentType: false,
+            dataType: "json",
+
+            success: function(data) {
+                $('#exampleModal').modal('hide');
+                $('.page-loader-wrapper').hide();
+                var msg = "";
+                if (data.status == 1) {
+                    msg = "Employee Save Successfully";
+
+
+                } else if (data.status == 2) {
+                    msg = "Employee Update Successfully";
+                }
+
+                $.confirm({
+                    title: 'Success!!',
+                    type: 'green',
+                    icon: 'fa fa-check',
+                    content: msg,
+                    buttons: {
+                        ok: function() {
+                            create_table();
+                        },
+                        close: function() {
+
+                        }
+
+                    }
+                });
+
+
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+
+                $('.page-loader-wrapper').hide();
+                var msg = "";
+                var msg = "<strong>Failed to Approve data.</strong><br/>";
                 if (jqXHR.status !== 422 && jqXHR.status !== 400) {
                     msg += "<strong>" + jqXHR.status + ": " + errorThrown + "</strong>";
                 } else {
@@ -1084,13 +855,13 @@ function employeeSave(){
                         }
                     } else {
                         msg += "Error(s):<strong><ul>";
-                        $.each(jqXHR.responseJSON['errors'], function (key, value) {
-                            
+                        $.each(jqXHR.responseJSON['errors'], function(key, value) {
+
                             msg += "<li>" + value + "</li>";
                         });
                         msg += "</ul></strong>";
                     }
-                    alert(msg)
+
                 }
                 $.alert({
                     type: 'red',
@@ -1098,11 +869,11 @@ function employeeSave(){
                     title: 'Error!!',
                     content: msg
                 });
-                   
 
-                },
-            });
-        }
+
+            },
+        });
+    }
 </script>
 
 @endsection

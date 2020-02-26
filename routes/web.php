@@ -82,7 +82,7 @@ Route::get('todo_list', function () {
 
 //User Controller
 Route::post('employeeSaveUpdate', 'UserController@employeeSaveUpdate')->name('employeeSaveUpdate');
-Route::post('employeeDatatable', 'UserController@employeeDatatable');
+Route::post('employeeUsersDatatable', 'UserController@employeeUsersDatatable')->name('employeeUsersDatatable');
 Route::post('employeeEditData', 'UserController@employeeEditData');
-Route::post('employeeDelete', 'UserController@employeeDelete');
+Route::post('employeeUserDelete', 'UserController@employeeUserDelete')->name('employeeUserDelete');
 });

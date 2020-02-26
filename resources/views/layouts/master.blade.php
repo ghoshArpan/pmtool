@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta name="csrf-token" content="F4bg7M6pEEWxNaTup6NoymCaGyPygNrWu4l98oJQ">
         <link rel="icon" href="http://puffinassets.com/demo/epic/hr/laravel/public/assets/images/favicon.ico" type="image/x-icon"> <!-- Favicon-->
-        <title>Dashboard - Laravel</title>
+        <title>PM-TOOL</title>
         <meta name="description" content="Laravel">
         <meta name="author" content="Laravel">
 
@@ -22,6 +22,7 @@
         <link rel="stylesheet" href="{{asset('css/bootstrapValidator.min.css')}}">
         <link rel="stylesheet" href="{{asset('css/datatables.min.css')}}">
         <link rel="stylesheet" href="{{asset('css/jquery-confirm.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/bootstrap-datepicker.css')}}">
     </head>
 
     <body class="font-montserrat">
@@ -39,11 +40,11 @@
                     <div class="hleft">
                         <a class="header-brand" href="{{route('index')}}"><i class="fe fe-command brand-logo"></i></a>
                         <div class="dropdown">
-                            <a href="http://puffintheme.com/demo/epic/hr/laravel/public/pages/search" class="nav-link icon"><i class="fa fa-search"></i></a>
-                            <a href="http://puffintheme.com/demo/epic/hr/laravel/public/pages/calendar" class="nav-link icon app_inbox"><i class="fa fa-calendar"></i></a>
-                            <a href="http://puffintheme.com/demo/epic/hr/laravel/public/pages/contact"  class="nav-link icon xs-hide"><i class="fa fa-id-card-o"></i></a>
-                            <a href="http://puffintheme.com/demo/epic/hr/laravel/public/chatapp/chat"  class="nav-link icon xs-hide"><i class="fa fa-comments-o"></i></a>
-                            <a href="http://puffintheme.com/demo/epic/hr/laravel/public/pages/filemanager"  class="nav-link icon app_file xs-hide"><i class="fa fa-folder-o"></i></a>
+                            <a href="#" class="nav-link icon"><i class="fa fa-search"></i></a>
+                            <a href="#" class="nav-link icon app_inbox"><i class="fa fa-calendar"></i></a>
+                            <a href="#"  class="nav-link icon xs-hide"><i class="fa fa-id-card-o"></i></a>
+                            <a href="#"  class="nav-link icon xs-hide"><i class="fa fa-comments-o"></i></a>
+                            <a href="#"  class="nav-link icon app_file xs-hide"><i class="fa fa-folder-o"></i></a>
                         </div>
                     </div>
                     <div class="hright">
@@ -394,11 +395,11 @@
                         {{-- <li class="">
                             <a href="javascript:void(0)" class="has-arrow arrow-c"><i class="icon-lock"></i><span>Authentication</span></a>
                             <ul>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/authentication/login">Login</a></li>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/authentication/register">Register</a></li>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/authentication/forgotpassword">Forgot password</a></li>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/authentication/error404">Error 404</a></li>
-                                <li class=""><a href="http://puffintheme.com/demo/epic/hr/laravel/public/authentication/error500">Error 500</a></li>
+                                <li class=""><a href="#">Login</a></li>
+                                <li class=""><a href="#">Register</a></li>
+                                <li class=""><a href="#">Forgot password</a></li>
+                                <li class=""><a href="#">Error 404</a></li>
+                                <li class=""><a href="#">Error 500</a></li>
                             </ul>
                         </li> --}}
                     </ul>
@@ -411,12 +412,13 @@
         <!-- Scripts -->
        
         <script src="{{asset('js/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/js/lib.vendor.bundle.js')}}"></script>
+        <script src="{{asset('assets/js/lib.vendor.bundle.js')}}"></script>
        
+        <script src="{{asset('assets/js/counterup.bundle.js')}}"></script>
         <script src="{{asset('js/datatables.min.js')}}"></script>
         <script src="{{asset('js/jquery-confirm.min.js')}}"></script>
-        <script src="{{asset('assets/js/lib.vendor.bundle.js')}}"></script>
-        <script src="{{asset('assets/js/lib.vendor.bundle.js')}}"></script>
-        <script src="{{asset('assets/js/counterup.bundle.js')}}"></script>
+        <script src="{{asset('js/bootstrap-datepicker.js')}}"></script>
         <script src="{{asset('js/dropify.js')}}"></script>
         <script src="{{asset('js/dropify.min.js')}}"></script>
         <script src="{{asset('assets/js/apexcharts.bundle.js')}}"></script>
