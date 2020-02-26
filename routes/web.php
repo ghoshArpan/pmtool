@@ -85,4 +85,11 @@ Route::post('employeeSaveUpdate', 'UserController@employeeSaveUpdate')->name('em
 Route::post('employeeUsersDatatable', 'UserController@employeeUsersDatatable')->name('employeeUsersDatatable');
 Route::post('employeeEditData', 'UserController@employeeEditData');
 Route::post('employeeUserDelete', 'UserController@employeeUserDelete')->name('employeeUserDelete');
+
+
+/*********************Holiday***************** */
+Route::post('holidaySaveUpdate', 'holidayController@holidaySaveUpdate')->name('holidaySaveUpdate');
+Route::post('holidayEdit', 'holidayController@holidayEdit')->name('holidayEdit');
+Route::post('holidayDelete', 'holidayController@holidayDelete')->name('holidayDelete');
+
 });
