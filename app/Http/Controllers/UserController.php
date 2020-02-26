@@ -8,7 +8,7 @@ use Image;
 class UserController extends Controller
 {
     public function employeeSaveUpdate(Request $request){
-//dd($request->all());
+
         $statusCode = 200;
         if (!$request->ajax()) {
             $statusCode = 400;
@@ -17,7 +17,7 @@ class UserController extends Controller
         }
         $id="";
         if(isset($request->id)){
-$id=$request->id;
+            $id=$request->id;
         }
         $this->validate($request,[
             'user_name'=>"required|max:255|alpha_num|string",
@@ -95,12 +95,11 @@ $id=$request->id;
        
        
         $image = $request->up_image;
-        //echo $image;die;
+        
        
         if(!empty($request->file('up_image'))){
           
-           // @unlink(public_path('user_image/'.$fileName));
-           @unlink('public/user_image/'.$fileName);
+        @unlink('public/user_image/'.$fileName);
           
             $image = $request->file('up_image');
             $extension =$image->getClientOriginalExtension(); // getting image extension
