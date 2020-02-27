@@ -95,9 +95,7 @@ Route::post('holidaySaveUpdate', 'holidayController@holidaySaveUpdate')->name('h
 Route::post('holidayEdit', 'holidayController@holidayEdit')->name('holidayEdit');
 Route::post('holidayDelete', 'holidayController@holidayDelete')->name('holidayDelete');
 
-
 /*********************Leaves******************/
 Route::post('leavesDatatable', 'leaveController@leavesDatatable')->name('leavesDatatable');
 Route::post('leaveStatusChanged', 'leaveController@leaveStatusChanged')->name('leaveStatusChanged');
-
 });
