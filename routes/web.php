@@ -85,4 +85,12 @@ Route::post('employeeSaveUpdate', 'UserController@employeeSaveUpdate')->name('em
 Route::post('employeeUsersDatatable', 'UserController@employeeUsersDatatable')->name('employeeUsersDatatable');
 Route::post('employeeEditData', 'UserController@employeeEditData');
 Route::post('employeeUserDelete', 'UserController@employeeUserDelete')->name('employeeUserDelete');
+
+//Depaerment
+Route::post('departmentSaveUpdate', 'DepartmentController@departmentSaveUpdate')->name('departmentSaveUpdate');
+Route::post('departmentDatatable', 'DepartmentController@departmentDatatable')->name('departmentDatatable');
+Route::post('dapertmentEdit', 'DepartmentController@dapertmentEdit')->name('dapertmentEdit');
+Route::post('departmentDelete', 'DepartmentController@departmentDelete')->name('departmentDelete');
+
+
 });

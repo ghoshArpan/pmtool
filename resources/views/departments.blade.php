@@ -167,11 +167,11 @@
     <div class="container-fluid">
         <div class="d-flex justify-content-between align-items-center">
             <ul class="nav nav-tabs page-header-tab">
-                <li class="nav-item"><a class="nav-link active" id="Departments-tab" data-toggle="tab" href="#Departments-list">List View</a></li>
-                <li class="nav-item"><a class="nav-link" id="Departments-tab" data-toggle="tab" href="#Departments-grid">Grid View</a></li>
+                <li class="nav-item"><a class="nav-link active" id="Departments-tab" data-toggle="tab" href="#Departments-list">Depertment List</a></li>
+                
             </ul>
             <div class="header-action">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fe fe-plus mr-2"></i>Add</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" id="add_button"><i class="fe fe-plus mr-2"></i>Add</button>
             </div>
         </div>
     </div>
@@ -194,7 +194,7 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-striped table-vcenter table-hover mb-0 text-nowrap">
+                            <table class="table table-striped table-vcenter table-hover mb-0 text-nowrap" id="list-department">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -204,248 +204,12 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>01</td>
-                                        <td><div class="font-15">Web Development</div></td>
-                                        <td>John Smith</td>
-                                        <td>102</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>02</td>
-                                        <td><div class="font-15">Marketing</div></td>
-                                        <td>Maryam Amiri</td>
-                                        <td>13</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>03</td>
-                                        <td><div class="font-15">App Development</div></td>
-                                        <td>Frank Camly</td>
-                                        <td>21</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>04</td>
-                                        <td><div class="font-15">Support</div></td>
-                                        <td>Gary Camara</td>
-                                        <td>84</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>05</td>
-                                        <td><div class="font-15">Accounts</div></td>
-                                        <td>Fidel Tonn</td>
-                                        <td>11</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>06</td>
-                                        <td><div class="font-15">PHP Open Source</div></td>
-                                        <td>Maryam Amiri</td>
-                                        <td>37</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>07</td>
-                                        <td><div class="font-15">Design and Printing</div></td>
-                                        <td>Maryam Amiri</td>
-                                        <td>17</td>
-                                        <td>
-                                            <button type="button" class="btn btn-icon" title="Edit"><i class="fa fa-edit"></i></button>
-                                            <button type="button" class="btn btn-icon js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="Departments-grid" role="tabpanel">
-                <div class="row clearfix">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <img class="img-thumbnail rounded-circle avatar-xxl" src="../assets/images/sm/avatar1.jpg" alt="">
-                                <h6 class="mt-3">John Smith</h6>
-                                <div class="text-center text-muted mb-3">Web Development</div>
-                                <button type="button" class="btn btn-icon btn-sm btn-outline-primary"><i class="fa fa-pencil"></i></button>
-                                <button type="button" class="btn btn-icon btn-sm btn-outline-danger"><i class="fa fa-trash"></i></button>
-                            </div>
-                            <div class="card-footer text-center">
-                                <div class="row clearfix">
-                                    <div class="col-6">
-                                        <h5 class="mb-0">105</h5>
-                                        <div class="text-muted">Employee</div>
-                                    </div>
-                                    <div class="col-6">
-                                        <h5 class="mb-0">$3100</h5>
-                                        <div class="text-muted">Earnings</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <img class="img-thumbnail rounded-circle avatar-xxl" src="../assets/images/sm/avatar2.jpg" alt="">
-                                <h6 class="mt-3">Maryam Amiri</h6>
-                                <div class="text-center text-muted mb-3">Web Development</div>
-                                <button type="button" class="btn btn-icon btn-sm btn-outline-primary"><i class="fa fa-pencil"></i></button>
-                                <button type="button" class="btn btn-icon btn-sm btn-outline-danger"><i class="fa fa-trash"></i></button>
-                            </div>
-                            <div class="card-footer text-center">
-                                <div class="row clearfix">
-                                    <div class="col-6">
-                                        <h5 class="mb-0">105</h5>
-                                        <div class="text-muted">Employee</div>
-                                    </div>
-                                    <div class="col-6">
-                                        <h5 class="mb-0">$3100</h5>
-                                        <div class="text-muted">Earnings</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <img class="img-thumbnail rounded-circle avatar-xxl" src="../assets/images/sm/avatar3.jpg" alt="">
-                                <h6 class="mt-3">Fidel Tonn</h6>
-                                <div class="text-center text-muted mb-3">Web Development</div>
-                                <button type="button" class="btn btn-icon btn-sm btn-outline-primary"><i class="fa fa-pencil"></i></button>
-                                <button type="button" class="btn btn-icon btn-sm btn-outline-danger"><i class="fa fa-trash"></i></button>
-                            </div>
-                            <div class="card-footer text-center">
-                                <div class="row clearfix">
-                                    <div class="col-6">
-                                        <h5 class="mb-0">12</h5>
-                                        <div class="text-muted">Employee</div>
-                                    </div>
-                                    <div class="col-6">
-                                        <h5 class="mb-0">$1800</h5>
-                                        <div class="text-muted">Earnings</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <img class="img-thumbnail rounded-circle avatar-xxl" src="../assets/images/sm/avatar4.jpg" alt="">
-                                <h6 class="mt-3">Frank Camly</h6>
-                                <div class="text-center text-muted mb-3">Web Development</div>
-                                <button type="button" class="btn btn-icon btn-sm btn-outline-primary"><i class="fa fa-pencil"></i></button>
-                                <button type="button" class="btn btn-icon btn-sm btn-outline-danger"><i class="fa fa-trash"></i></button>
-                            </div>
-                            <div class="card-footer text-center">
-                                <div class="row clearfix">
-                                    <div class="col-6">
-                                        <h5 class="mb-0">105</h5>
-                                        <div class="text-muted">Employee</div>
-                                    </div>
-                                    <div class="col-6">
-                                        <h5 class="mb-0">$3100</h5>
-                                        <div class="text-muted">Earnings</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <img class="img-thumbnail rounded-circle avatar-xxl" src="../assets/images/sm/avatar2.jpg" alt="">
-                                <h6 class="mt-3">Maryam Amiri</h6>
-                                <div class="text-center text-muted mb-3">Web Development</div>
-                                <button type="button" class="btn btn-icon btn-sm btn-outline-primary"><i class="fa fa-pencil"></i></button>
-                                <button type="button" class="btn btn-icon btn-sm btn-outline-danger"><i class="fa fa-trash"></i></button>
-                            </div>
-                            <div class="card-footer text-center">
-                                <div class="row clearfix">
-                                    <div class="col-6">
-                                        <h5 class="mb-0">105</h5>
-                                        <div class="text-muted">Employee</div>
-                                    </div>
-                                    <div class="col-6">
-                                        <h5 class="mb-0">$3100</h5>
-                                        <div class="text-muted">Earnings</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <img class="img-thumbnail rounded-circle avatar-xxl" src="../assets/images/sm/avatar1.jpg" alt="">
-                                <h6 class="mt-3">John Smith</h6>
-                                <div class="text-center text-muted mb-3">Web Development</div>
-                                <button type="button" class="btn btn-icon btn-sm btn-outline-primary"><i class="fa fa-pencil"></i></button>
-                                <button type="button" class="btn btn-icon btn-sm btn-outline-danger"><i class="fa fa-trash"></i></button>
-                            </div>
-                            <div class="card-footer text-center">
-                                <div class="row clearfix">
-                                    <div class="col-6">
-                                        <h5 class="mb-0">55</h5>
-                                        <div class="text-muted">Employee</div>
-                                    </div>
-                                    <div class="col-6">
-                                        <h5 class="mb-0">$12,024</h5>
-                                        <div class="text-muted">Earnings</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <img class="img-thumbnail rounded-circle avatar-xxl" src="../assets/images/sm/avatar2.jpg" alt="">
-                                <h6 class="mt-3">Maryam Amiri</h6>
-                                <div class="text-center text-muted mb-3">Web Development</div>
-                                <button type="button" class="btn btn-icon btn-sm btn-outline-primary"><i class="fa fa-pencil"></i></button>
-                                <button type="button" class="btn btn-icon btn-sm btn-outline-danger"><i class="fa fa-trash"></i></button>
-                            </div>
-                            <div class="card-footer text-center">
-                                <div class="row clearfix">
-                                    <div class="col-6">
-                                        <h5 class="mb-0">23</h5>
-                                        <div class="text-muted">Employee</div>
-                                    </div>
-                                    <div class="col-6">
-                                        <h5 class="mb-0">$5210</h5>
-                                        <div class="text-muted">Earnings</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>            
 </div>
@@ -467,8 +231,404 @@
             </div>
         </div>
     </footer>
+</div>
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            {!! Form::open(['url' => '', 'method' => 'post' ,'name' => 'department', 'id'=>'department','class'=>'department']) !!}
+            {!! Form::hidden('code',null,['class' => 'form-control','id'=>'code']) !!}
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Department</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row clearfix">
+                    <div class="col-md-12 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::text('dept_name',null,['class' => 'form-control','id'=>'dept_name', 'placeholder' => 'Department Name','autocomplete'=>'off']) !!}
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-12 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::text('dept_head',null,['class' => 'form-control','id'=>'dept_head', 'placeholder' => 'Department Head','autocomplete'=>'off']) !!}
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-6">
+                        <div class="form-group">
+                            {!! Form::text('total_emp',null,['class' => 'form-control','id'=>'total_emp', 'placeholder' => 'Total Employee','autocomplete'=>'off']) !!}
+                        </div>
+                    </div>
+               
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                {!! Form::submit('Save',['class' => 'btn btn-primary','type'=>'submit','id'=>'save']) !!}
+            </div>
+            {!! Form::close() !!}
+        </div>
+    </div>
 </div>   
 
 
+
+@endsection
+@section('script')
+<script>
+    $(document).ready(function() {
+
+        $("#add_button").click(function(){
+            $("#dept_head").val('');
+            $("#dept_name").val('');
+            $("#total_emp").val('');
+            $("#exampleModal").modal('show');
+            $("#department")[0].reset();
+            $('#department').bootstrapValidator('resetForm', true);
+
+        });
+
+    $('#exampleModal').on('hide.bs.modal', function (e) {
+         $('.form-control-feedback').css('display', 'none');
+         $('.has-success').removeClass('has-success');
+      });
+        create_table();
+       
+      
+        $('#department').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: '',
+                invalid: '',
+                validating: '',
+            },
+            fields: {
+                dept_name: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Enter Department Name',
+                        },
+
+                    }
+                },
+                dept_head: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Enter Department Head',
+                        },
+
+                    }
+                },
+                total_emp: {
+                    message: 'This field is not valid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Enter Total Number of Employee',
+                        },
+                        digits: {
+                            message: 'Total Number of Employee Should be Digits'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 3,
+                            message: 'Total Number of Employee should be 1 to 3 Digits'
+                        }
+
+                    }
+                }
+               
+            }
+        }).on('success.form.bv', function(e) {
+            e.preventDefault();
+            departmentSave();
+        });
+
+        var table = $('#list-department').DataTable();
+        table.on('draw.dt', function() {
+
+            $('.edit_button').click(function() {
+                var dapertment_code = this.id;
+                //alert(dapertment_code);
+                $.ajax({
+                    type: 'post',
+                    url: "{{route('dapertmentEdit')}}",
+                    data: {
+                        'dapertment_code': dapertment_code,
+                        '_token': $('input[name="_token"]').val()
+                    },
+                    dataType: 'json',
+                    success: function(datam) {
+                       if (datam.status == 1) {
+
+                       $("#dept_name").val(datam.data.dept_name);
+                       $("#dept_head").val(datam.data.dept_head);
+                       $("#total_emp").val(datam.data.dept_employee);
+                       $("#code").val(datam.data.id);
+                       $("#save").html('Update');
+                        $("#exampleModal").modal('show');
+   
+                        } else {
+                            $.confirm({
+                                type: 'red',
+                                icon: 'fa fa-warning',
+                                title: 'Error!!',
+                                content: '<strong>UNSUCCESS:</strong> Something going Wrong.'
+                            });
+                        }
+                        
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        var msg = "<strong>Failed to Delete data.</strong><br/>";
+                        if (jqXHR.status !== 422 && jqXHR.status !== 400) {
+                            msg += "<strong>" + jqXHR.status + ": " + errorThrown + "</strong>";
+                        } else {
+                            if (jqXHR.responseJSON.hasOwnProperty('exception')) {
+                                if (jqXHR.responseJSON.exception_code == 23000) {
+                                    msg += "Data Already Used!! Cannot Be Deleted.";
+                                }
+                            } else {
+                                msg += "Error(s):<strong><ul>";
+                                $.each(jqXHR.responseJSON['errors'], function(key, value) {
+                                    msg += "<li>" + value + "</li>";
+                                });
+                                msg += "</ul></strong>";
+                            }
+                        }
+                        $.alert({
+                            type: 'red',
+                            icon: 'fa fa-warning',
+                            title: 'Error!!',
+                            content: msg
+                        });
+
+                    }
+                });
+                
+                
+            });
+
+            $('.delete_button').click(function() {
+
+                var reply = confirm('Are you sure to delete the record?');
+                if (!reply) {
+                    return false;
+                }
+                var dlt_code = this.id;
+                $.ajax({
+                    type: 'post',
+                    url: "{{route('departmentDelete')}}",
+                    data: {
+                        'dlt_code': dlt_code,
+                        '_token': $('input[name="_token"]').val()
+                    },
+                    dataType: 'json',
+                    success: function(datam) {
+                       if (datam.status == 1) {
+                            $.confirm({
+                                type: 'green',
+                                icon: 'fa fa-check',
+                                title: 'Success!!',
+                                content: '<strong>SUCCESS:</strong> Record deleted successfully.'
+                            });
+                        } else {
+                            $.confirm({
+                                type: 'red',
+                                icon: 'fa fa-warning',
+                                title: 'Error!!',
+                                content: '<strong>SUCCESS:</strong> Failed to delete data.'
+                            });
+                        }
+                        create_table();
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        var msg = "<strong>Failed to Delete data.</strong><br/>";
+                        if (jqXHR.status !== 422 && jqXHR.status !== 400) {
+                            msg += "<strong>" + jqXHR.status + ": " + errorThrown + "</strong>";
+                        } else {
+                            if (jqXHR.responseJSON.hasOwnProperty('exception')) {
+                                if (jqXHR.responseJSON.exception_code == 23000) {
+                                    msg += "Data Already Used!! Cannot Be Deleted.";
+                                }
+                            } else {
+                                msg += "Error(s):<strong><ul>";
+                                $.each(jqXHR.responseJSON, function(key, value) {
+                                    msg += "<li>" + value + "</li>";
+                                });
+                                msg += "</ul></strong>";
+                            }
+                        }
+                        $.alert({
+                            type: 'red',
+                            icon: 'fa fa-warning',
+                            title: 'Error!!',
+                            content: msg
+                        });
+
+                    }
+                });
+
+            });
+        });
+    });
+
+    function create_table() {
+
+        $("#list-department").dataTable().fnDestroy();
+        $('#list-department').dataTable({
+
+            "processing": true,
+            "serverSide": true,
+            "ajax": {
+                url: "{{route('departmentDatatable')}}",
+                type: "post",
+                data: {
+                    '_token': $('input[name="_token"]').val()
+                },
+                dataSrc: "record_details",
+            },
+            "dataType": 'json',
+            "columnDefs": [{
+                    className: "table-text",
+                    "targets": "_all"
+                },
+                {
+                    "targets": 0,
+                    "data": "id",
+                    "defaultContent": "",
+                    "searchable": false,
+                    "sortable": false,
+                },
+                {
+                    "targets": 1,
+                    "data": "dept_name",
+                    "searchable": true,
+                    "sortable": true,
+                },
+                {
+                    "targets": 2,
+                    "data": "dept_head",
+                    "searchable": true,
+                    "sortable": true,
+                },
+                {
+                    "targets": 3,
+                    "data": "dept_employee",
+                    "searchable": true,
+                    "sortable": true,
+                },
+                
+                 {
+                "targets": -1,
+                "data": 'action',
+                "searchable": false,
+                "sortable": false,
+                "render": function (data, type, full, meta) {
+                   var str_btns="";
+                   
+                   str_btns += '<button type="button"  class="btn btn-info  edit_button" id="' + data.c+ '" title="View"><i class="fa fa-view fa-edit"></i></button>&nbsp;';
+                    str_btns += '<button type="button"  class="btn btn-danger  delete_button" id="' + data.c+ '" title="View"><i class="fa fa-view fa-trash"></i></button>&nbsp;';
+
+
+
+
+                    return str_btns;
+               }
+             }
+            ]
+
+        });
+    }
+
+    function departmentSave() {
+        $('.page-loader-wrapper').show();
+
+        var dept_name = $('#dept_name').val();
+        var dept_head = $('#dept_head').val();
+        var total_emp = $('#total_emp').val();
+        var code = $('#code').val();
+
+        var departmentSaveUpdate = new FormData();
+        departmentSaveUpdate.append('dept_name', dept_name);
+        
+        departmentSaveUpdate.append('dept_head', dept_head);
+        departmentSaveUpdate.append('total_emp', total_emp);
+        if (code != '') {
+            departmentSaveUpdate.append('code', code);
+        }
+        departmentSaveUpdate.append('_token', '{{csrf_token()}}');
+
+        $.ajax({
+            type: 'post',
+            url: "{{route('departmentSaveUpdate')}}",
+            data: departmentSaveUpdate,
+            processData: false,
+            contentType: false,
+            dataType: "json",
+
+            success: function(data) {
+                $('#exampleModal').modal('hide');
+               $('.page-loader-wrapper').hide();
+                var msg = "";
+                if (data.status == 1) {
+                    msg = "Employee Save Successfully";
+
+
+                } else if (data.status == 2) {
+                    msg = "Employee Update Successfully";
+                }
+
+                $.confirm({
+                    title: 'Success!!',
+                    type: 'green',
+                    icon: 'fa fa-check',
+                    content: msg,
+                    buttons: {
+                        ok: function() {
+                            create_table();
+                        },
+                        
+
+                    }
+                });
+
+
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+
+                $('.page-loader-wrapper').hide();
+                var msg = "";
+                
+                if (jqXHR.status !== 422 && jqXHR.status !== 400) {
+                    msg += "<strong>" + jqXHR.status + ": " + errorThrown + "</strong>";
+                } else {
+                    if (jqXHR.responseJSON.hasOwnProperty('exception')) {
+                        if (jqXHR.responseJSON.exception_code == 23000) {
+                            msg += "Data Already Used!! Cannot Be Approve.";
+                        }
+                    } else {
+                        msg += "Error(s):<strong><ul>";
+                        $.each(jqXHR.responseJSON['errors'], function(key, value) {
+
+                            msg += "<li>" + value + "</li>";
+                        });
+                        msg += "</ul></strong>";
+                    }
+
+                }
+                $.alert({
+                    type: 'red',
+                    icon: 'fa fa-warning',
+                    title: 'Error!!',
+                    content: msg
+                });
+
+
+            },
+        });
+    }
+</script>
 
 @endsection
