@@ -96,13 +96,13 @@
                             @csrf
                         <div class="card-body">
                             <div class="card-title">Login to your account</div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <select class="custom-select">
                                     <option>HR Dashboard</option>
                                     <option>Project Dashboard</option>
                                     <option>Job Portal</option>
                                 </select>
-                            </div>
+                            </div> -->
                             <div class="form-group">
 
                                 <label class="form-label">Email</label>
@@ -132,14 +132,14 @@
                                 <span class="custom-control-label">Remember me</span>
                                 </label>
                             </div>
-                            <div class="form-footer">
+                            <!-- <div class="form-footer">
                                 <button type="submit" href="#" class="btn btn-primary btn-block" title="">Sign in</a>
-                            </div>
+                            </div> -->
                         </div>
                     </form>
-                        <div class="text-center text-muted">
+                        <!-- <div class="text-center text-muted">
                             Don't have account yet? <a href="#">Sign up</a>
-                        </div>
+                        </div> -->
                     </div>
                         </div>
                         <div class="auth_right">

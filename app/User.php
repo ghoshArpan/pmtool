@@ -43,4 +43,8 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\tbl_departments','id','emp_department_type');
     }
+
+    public function get_leaves(){
+        return $this->hasMany('App\tbl_employee_leave', 'employee_user_id', 'id');
+    }
 }
