@@ -36,9 +36,7 @@ Route::get('departments', function () {
 })->name('departments');
 
 
-Route::get('employee', function () {
-    return view('employee');
-})->name('employee');
+Route::get('employee','UserController@getEmployee')->name('employee');
 
 
 Route::get('activities', function () {
@@ -83,7 +81,7 @@ Route::get('todo_list', function () {
 //User Controller
 Route::post('employeeSaveUpdate', 'UserController@employeeSaveUpdate')->name('employeeSaveUpdate');
 Route::post('employeeUsersDatatable', 'UserController@employeeUsersDatatable')->name('employeeUsersDatatable');
-Route::post('employeeEditData', 'UserController@employeeEditData');
+Route::post('employeeEditData', 'UserController@employeeEditData')->name('employeeEditData');
 Route::post('employeeUserDelete', 'UserController@employeeUserDelete')->name('employeeUserDelete');
 
 //Depaerment
@@ -92,9 +90,14 @@ Route::post('departmentSaveUpdate', 'DepartmentController@departmentSaveUpdate')
 Route::post('dapertmentEdit', 'DepartmentController@dapertmentEdit')->name('dapertmentEdit');
 Route::post('departmentDelete', 'DepartmentController@departmentDelete')->name('departmentDelete');
 
-/*********************Holiday***************** */
+/*********************Holiday******************/
 Route::post('holidaySaveUpdate', 'holidayController@holidaySaveUpdate')->name('holidaySaveUpdate');
 Route::post('holidayEdit', 'holidayController@holidayEdit')->name('holidayEdit');
 Route::post('holidayDelete', 'holidayController@holidayDelete')->name('holidayDelete');
+
+
+/*********************Leaves******************/
+Route::post('leavesDatatable', 'leaveController@leavesDatatable')->name('leavesDatatable');
+Route::post('leaveStatusChanged', 'leaveController@leaveStatusChanged')->name('leaveStatusChanged');
 
 });

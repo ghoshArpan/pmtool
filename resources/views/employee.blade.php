@@ -258,7 +258,7 @@
                             <table class="table table-striped table-bordered table-hover notice-types-table" id="list-employee">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>Sl No</th>
                                         <th>Name</th>
                                         <th>Mobile No</th>
                                         <th>Employee ID</th>
@@ -278,10 +278,10 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-hover table-striped table-vcenter text-nowrap mb-0">
+                            <table class="table table-striped table-bordered table-hover notice-types-table" id="list-leave">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>Sl No</th>
                                         <th>Name</th>
                                         <th>Employee ID</th>
                                         <th>Leave Type</th>
@@ -326,7 +326,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             {!! Form::open(['url' => '', 'method' => 'post' ,'name' => 'employeesave', 'id'=>'employeesave','class'=>'employeesave']) !!}
-            {{-- {!! Form::hidden('code',null,['class' => 'form-control','id'=>'code', 'placeholder' => 'User Name','autocomplete'=>'off']) !!} --}}
+            {!! Form::hidden('code','',['class' => 'form-control','id'=>'code', 'placeholder' => 'User Name','autocomplete'=>'off']) !!}
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Add Employee</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -377,25 +377,43 @@
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="form-group">
-                            {!! Form::text('joining_date',null,['class' => 'form-control','id'=>'joining_date', 'placeholder' => 'DD/MM/YYYY','autocomplete'=>'off']) !!}
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="form-group">
-                            {!! Form::text('employee_id',null,['class' => 'form-control','id'=>'employee_id', 'placeholder' => 'Enter Employee Id','autocomplete'=>'off']) !!}
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="form-group">
                             {!! Form::select('roll_type', [' '=>'Select Roll Type', '1' => 'Employee','2'=> 'Client'],null,['id'=>'roll_type','class'=>'form-control']) !!}
-                    </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="form-group">
-                            {!! Form::select('emp_department_type', [' '=>'Select Department','1' => 'Dept 1', '2' => 'Dept 2'],null,['id'=>'emp_department_type','class'=>'form-control']) !!}
                         </div>
                     </div>
+                    <div class="row" id="roll_details" style="display:none;">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                                {!! Form::text('joining_date',null,['class' => 'form-control','id'=>'joining_date', 'placeholder' => 'Select join date','autocomplete'=>'off']) !!}
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                                {!! Form::text('employee_id',null,['class' => 'form-control','id'=>'employee_id', 'placeholder' => 'Enter Employee Id','autocomplete'=>'off']) !!}
+                            </div>
+                        </div>
 
+                        <div class="col-md-4 col-sm-6">
+                            <div class="form-group">
+                                {!! Form::select('emp_department_type', $deptData,[],['id'=>'emp_department_type','class'=>'form-control','placeholder'=>'Select Department']) !!}
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                {!! Form::text('emp_facebook_link',null,['class' => 'form-control','id'=>'emp_facebook_link', 'placeholder' => 'Facebook','autocomplete'=>'off']) !!}
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                {!! Form::text('emp_twitter_link',null,['class' => 'form-control','id'=>'emp_twitter_link', 'placeholder' => 'Twitter','autocomplete'=>'off']) !!}
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                {!! Form::text('emp_linkedin_link',null,['class' => 'form-control','id'=>'emp_linkedin_link', 'placeholder' => 'Linkedin','autocomplete'=>'off']) !!}
+                            </div>
+                        </div>
+
+                    </div>
                     <div class="col-12">
                         <div class="form-group mt-2 mb-3">
                             <input type="file" class="dropify" id="up_image">
@@ -403,21 +421,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-group">
-                            {!! Form::text('emp_facebook_link',null,['class' => 'form-control','id'=>'emp_facebook_link', 'placeholder' => 'Facebook','autocomplete'=>'off']) !!}
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-group">
-                            {!! Form::text('emp_twitter_link',null,['class' => 'form-control','id'=>'emp_twitter_link', 'placeholder' => 'Twitter','autocomplete'=>'off']) !!}
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="form-group">
-                            {!! Form::text('emp_linkedin_link',null,['class' => 'form-control','id'=>'emp_linkedin_link', 'placeholder' => 'Linkedin','autocomplete'=>'off']) !!}
-                        </div>
-                    </div>
+
 
                 </div>
             </div>
@@ -445,7 +449,16 @@
             $('#employeesave').bootstrapValidator('revalidateField', 'joining_date');
 
         });
-      
+
+        $('#roll_type').change(function() {
+            var roll_type = $('#roll_type').val();
+            change_roll(roll_type);
+        });
+        $('#exampleModal').on('shown.bs.modal', function() {
+            $('#employeesave')[0].reset();
+            $('#roll_details').hide();
+        })
+
         $('#employeesave').bootstrapValidator({
             message: 'This value is not valid',
             feedbackIcons: {
@@ -613,14 +626,78 @@
         table.on('draw.dt', function() {
 
             $('.edit-button').click(function() {
-                var leasee_code = this.id;
-                //alert(leasee_code);
+                var edit_code = this.id;
+                $.ajax({
+                    type: 'post',
+                    url: "{{route('employeeEditData')}}",
+                    data: {
+                        'edit_code': edit_code,
+                        '_token': '{{csrf_token()}}'
+                    },
+                    dataType: 'json',
+                    success: function(datam) {
+                        if (datam.status == 1) {
+                            var base_url = window.location.hostname;
+                            var pageURL = $(location).attr("href");
+                            // alert(pageURL)
+                            $('#exampleModal').modal('show')
+                            $('#code').val(datam.tbl_user.id);
+                            $('#user_name').val(datam.tbl_user.user_name);
+                            $('#first_name').val(datam.tbl_user.first_name);
+                            $('#last_name').val(datam.tbl_user.last_name);
+                            $('#gender').val(datam.tbl_user.gender);
+                            $('#mob_no').val(datam.tbl_user.mob_no);
+                            $('#email').val(datam.tbl_user.email);
+                            $('#joining_date').val(datam.date);
+                            $('#roll_type').val(datam.tbl_user.roll_type);
+                            change_roll(datam.tbl_user.roll_type);
+                            $('#employee_id').val(datam.tbl_user.employee_id);
+                            $('#emp_department_type').val(datam.tbl_user.emp_department_type);
+                            $('#emp_facebook_link').val(datam.tbl_user.emp_facebook_link);
+                            $('#emp_twitter_link').val(datam.tbl_user.emp_twitter_link);
+                            $('#emp_linkedin_link').val(datam.tbl_user.emp_linkedin_link);
+                            //     jQuery("#up_image").attr('src', 'user_image/'+datam.tbl_user.emp_image);
+                            //   $(".dropify-render").append('<img src="user_image/'+datam.tbl_user.emp_image+'">');
+                            // $('#up_image').html('<img src="localhost/pmtool/public/user_image/'+datam.tbl_user.emp_image+'" />');
+                            // $('#up_image').val(datam.tbl_user.emp_image);
 
-                var datas = {
-                    'leasee_code': leasee_code,
-                    '_token': $('input[name="_token"]').val()
-                };
-                redirectPost('{{url("leasee_edit")}}', datas);
+
+                        } else {
+                            $.confirm({
+                                type: 'red',
+                                icon: 'fa fa-warning',
+                                title: 'Error!!',
+                                content: '<strong>SUCCESS:</strong> Failed to delete data.'
+                            });
+                        }
+
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        var msg = "<strong>Failed to Delete data.</strong><br/>";
+                        if (jqXHR.status !== 422 && jqXHR.status !== 400) {
+                            msg += "<strong>" + jqXHR.status + ": " + errorThrown + "</strong>";
+                        } else {
+                            if (jqXHR.responseJSON.hasOwnProperty('exception')) {
+                                if (jqXHR.responseJSON.exception_code == 23000) {
+                                    msg += "Data Already Used!! Cannot Be Deleted.";
+                                }
+                            } else {
+                                msg += "Error(s):<strong><ul>";
+                                $.each(jqXHR.responseJSON, function(key, value) {
+                                    msg += "<li>" + value + "</li>";
+                                });
+                                msg += "</ul></strong>";
+                            }
+                        }
+                        $.alert({
+                            type: 'red',
+                            icon: 'fa fa-warning',
+                            title: 'Error!!',
+                            content: msg
+                        });
+
+                    }
+                });
             });
 
             $('.delete-button').click(function() {
@@ -639,7 +716,7 @@
                     },
                     dataType: 'json',
                     success: function(datam) {
-                       if (datam.status == 1) {
+                        if (datam.status == 1) {
                             $.confirm({
                                 type: 'green',
                                 icon: 'fa fa-check',
@@ -685,7 +762,81 @@
 
             });
         });
+
+
+        var table = $('#list-leave').DataTable();
+        table.on('draw.dt', function() {
+
+            $('.approve-button').click(function() {
+                var approve_code = this.id;
+                $.ajax({
+                    type: 'post',
+                    url: "{{route('leaveStatusChanged')}}",
+                    data: {
+                        'approve_code': approve_code,
+                        '_token': $('input[name="_token"]').val()
+                    },
+                    dataType: 'json',
+                    success: function(datam) {
+                        $.confirm({
+                            type: 'green',
+                            icon: 'fa fa-check',
+                            title: 'Success!!',
+                            content: '<strong>SUCCESS:</strong> Approved successfully.',
+                            buttons: {
+                                ok: function() {
+                                    leave_list();
+                                }
+
+                            }
+                        });
+
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        var msg = "<strong>Failed to Delete data.</strong><br/>";
+                        if (jqXHR.status !== 422 && jqXHR.status !== 400) {
+                            msg += "<strong>" + jqXHR.status + ": " + errorThrown + "</strong>";
+                        } else {
+                            if (jqXHR.responseJSON.hasOwnProperty('exception')) {
+                                if (jqXHR.responseJSON.exception_code == 23000) {
+                                    msg += "Data Already Used!! Cannot Be Deleted.";
+                                }
+                            } else {
+                                msg += "Error(s):<strong><ul>";
+                                $.each(jqXHR.responseJSON, function(key, value) {
+                                    msg += "<li>" + value + "</li>";
+                                });
+                                msg += "</ul></strong>";
+                            }
+                        }
+                        $.alert({
+                            type: 'red',
+                            icon: 'fa fa-warning',
+                            title: 'Error!!',
+                            content: msg
+                        });
+
+                    }
+                });
+
+            });
+
+        });
     });
+
+    function change_roll(roll_type) {
+        if (roll_type == 1) {
+            $('#roll_details').show();
+        } else {
+            $('#roll_details').hide();
+            $('#joining_date').val('');
+            $('#employee_id').val('');
+            $('#emp_department_type').val('');
+            $('#emp_facebook_link').val('');
+            $('#emp_twitter_link').val('');
+            $('#emp_linkedin_link').val('');
+        }
+    }
 
     function create_table() {
 
@@ -750,7 +901,80 @@
                     "searchable": false,
                     "sortable": false,
                 },
+            ],
+            "fnInitComplete": function() {
+                leave_list();
+            }
+
+        });
+
+
+    }
+
+    function leave_list() {
+        $("#list-leave").dataTable().fnDestroy();
+        $('#list-leave').dataTable({
+
+            "processing": true,
+            "serverSide": true,
+            "ajax": {
+                url: "{{route('leavesDatatable')}}",
+                type: "post",
+                data: {
+                    '_token': $('input[name="_token"]').val()
+                },
+                dataSrc: "record_details",
+            },
+            "dataType": 'json',
+            "columnDefs": [{
+                    className: "table-text",
+                    "targets": "_all"
+                },
+                {
+                    "targets": 0,
+                    "data": "id",
+                    "defaultContent": "",
+                    "searchable": false,
+                    "sortable": false,
+                },
+                {
+                    "targets": 1,
+                    "data": "first_name",
+                    "searchable": true,
+                    "sortable": true,
+                },
+                {
+                    "targets": 2,
+                    "data": "employee_id",
+                    "searchable": true,
+                    "sortable": true,
+                },
+                {
+                    "targets": 3,
+                    "data": "leave_type",
+                    "searchable": true,
+                    "sortable": true,
+                },
+                {
+                    "targets": 4,
+                    "data": "date",
+                    "searchable": true,
+                    "sortable": true,
+                },
+                {
+                    "targets": 5,
+                    "data": "reason",
+                    "searchable": true,
+                    "sortable": true,
+                },
+                {
+                    "targets": -1,
+                    "data": 'action',
+                    "searchable": false,
+                    "sortable": false,
+                },
             ]
+
 
         });
     }
@@ -775,7 +999,7 @@
         var employee_id = $('#employee_id').val();
         var joining_date = $('#joining_date').val();
         var code = $('#code').val();
-
+        alert(code)
         var employeeSaveUpdate = new FormData();
         employeeSaveUpdate.append('user_name', user_name);
         employeeSaveUpdate.append('password', password);
@@ -816,11 +1040,11 @@
                 $('.page-loader-wrapper').hide();
                 var msg = "";
                 if (data.status == 1) {
-                    msg = "Employee Save Successfully";
+                    msg = "User Save Successfully";
 
 
                 } else if (data.status == 2) {
-                    msg = "Employee Update Successfully";
+                    msg = "User Update Successfully";
                 }
 
                 $.confirm({
@@ -830,10 +1054,10 @@
                     content: msg,
                     buttons: {
                         ok: function() {
-                            create_table();
+                            location.reload();
                         },
                         close: function() {
-
+                            location.reload();
                         }
 
                     }
@@ -845,7 +1069,7 @@
 
                 $('.page-loader-wrapper').hide();
                 var msg = "";
-                var msg = "<strong>Failed to Approve data.</strong><br/>";
+                var msg = "<strong>Failed to Save data.</strong><br/>";
                 if (jqXHR.status !== 422 && jqXHR.status !== 400) {
                     msg += "<strong>" + jqXHR.status + ": " + errorThrown + "</strong>";
                 } else {
