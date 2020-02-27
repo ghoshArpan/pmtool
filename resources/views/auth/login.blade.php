@@ -132,9 +132,9 @@
                                 <span class="custom-control-label">Remember me</span>
                                 </label>
                             </div>
-                            <!-- <div class="form-footer">
+                            <div class="form-footer">
                                 <button type="submit" href="#" class="btn btn-primary btn-block" title="">Sign in</a>
-                            </div> -->
+                            </div>
                         </div>
                     </form>
                         <!-- <div class="text-center text-muted">
