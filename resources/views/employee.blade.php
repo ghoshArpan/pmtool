@@ -380,7 +380,7 @@
                             {!! Form::select('roll_type', [' '=>'Select Roll Type', '1' => 'Employee','2'=> 'Client'],null,['id'=>'roll_type','class'=>'form-control']) !!}
                         </div>
                     </div>
-                    <div class="row" id="roll_details" style="display:none;">
+                    <div class="row" id="roll_details" style="display:none;margin-left:0px;margin-right:0px;">
                         <div class="col-md-4 col-sm-6">
                             <div class="form-group">
                                 {!! Form::text('joining_date',null,['class' => 'form-control','id'=>'joining_date', 'placeholder' => 'Select join date','autocomplete'=>'off']) !!}
