@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="<?php echo e(asset('assets/css/bootstrap.min.css')); ?>">
       <link rel="stylesheet" href="<?php echo e(asset('assets/css/summernote.css')); ?>">
       <link rel="stylesheet" href="<?php echo e(asset('css/dropify.min.css')); ?>">
-       
+
         <link rel="stylesheet" href="<?php echo e(asset('assets/css/c3.min.css')); ?>">
 
 
@@ -23,6 +23,25 @@
         <link rel="stylesheet" href="<?php echo e(asset('css/datatables.min.css')); ?>">
         <link rel="stylesheet" href="<?php echo e(asset('css/jquery-confirm.min.css')); ?>">
         <link rel="stylesheet" href="<?php echo e(asset('css/bootstrap-datepicker.css')); ?>">
+        <style>
+            .has-success>.form-control-feedback,
+            .has-success>.help-block {
+                color: green;
+            }
+            .has-error>.form-control-feedback,
+            .has-error>.help-block {
+                color: red;
+            }
+
+            .has-error>.form-control {
+            border-color: #dc3545;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px #dc3545;
+            }
+            .has-success>.form-control {
+            border-color: #28a745;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px #28a745;
+            }
+        </style>
     </head>
 
     <body class="font-montserrat">
@@ -363,7 +382,7 @@
                         <li class=""><a href="<?php echo e(route('users')); ?>"><i class="icon-users"></i><span>Users</span></a></li>
                         <li class=""><a href="<?php echo e(route('departments')); ?>"><i class="icon-control-pause"></i><span>Departments</span></a></li>
                         <li class=""><a href="<?php echo e(route('employee')); ?>"><i class="icon-user"></i><span>Employee</span></a></li>
-                        
+                       
                         <li class=""><a href="<?php echo e(route('holidays')); ?>"><i class="icon-like"></i><span>Holidays</span></a></li>
                         
                         
@@ -392,11 +411,11 @@
             <?php echo $__env->yieldContent('content'); ?>
         </div>
         <!-- Scripts -->
-       
+
         <script src="<?php echo e(asset('js/jquery.min.js')); ?>"></script>
         <script src="<?php echo e(asset('assets/js/lib.vendor.bundle.js')); ?>"></script>
         <script src="<?php echo e(asset('assets/js/lib.vendor.bundle.js')); ?>"></script>
-       
+
         <script src="<?php echo e(asset('assets/js/counterup.bundle.js')); ?>"></script>
         <script src="<?php echo e(asset('js/datatables.min.js')); ?>"></script>
         <script src="<?php echo e(asset('js/jquery-confirm.min.js')); ?>"></script>
